@@ -1,0 +1,17 @@
+{
+  "name": "Techonrise | Digital Transformation & SEO UK",
+  "short_name": "Techonrise",
+  "description": "Techonrise helps businesses grow, automate and modernise through SEO, websites, software, mobile apps, cloud infrastructure and practical AI automation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0C0F12",
+  "theme_color": "#0C0F12",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

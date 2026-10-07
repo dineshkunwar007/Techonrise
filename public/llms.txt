@@ -1,0 +1,77 @@
+# Techonrise Ltd
+
+> Modernise, Automate & Grow: Full-Stack Digital Transformation, Technical SEO, Bespoke Software & Practical AI Automation for UK Businesses.
+
+## Company Overview
+- **Name:** Techonrise Ltd
+- **Headquarters:** 124 Innovation House, London Road, Manchester, M1 4AB, United Kingdom
+- **Operating Regions:** Greater Manchester, London, Birmingham, Leeds, Liverpool, Bristol, Glasgow, Edinburgh, Sheffield, Cardiff, and Nationwide across the UK
+- **Email:** hello@techonrise.co.uk
+- **Phone:** +44 20 1234 5678
+- **Website:** https://techonrise.co.uk
+
+## Core Philosophy & Commitments
+1. **100% IP & Code Ownership:** Upon project completion, clients own 100% of custom source code, bespoke schemas, and assets with zero ongoing vendor licensing lock-in.
+2. **In-House UK Technical Delivery:** No offshore subcontracts. All solutions are architected, developed, and maintained by experienced UK-based engineers and SEO specialists.
+3. **UK Data Sovereignty & GDPR:** Encrypted databases, UK/EU data residency guarantees (London & Manchester cloud facilities), and full compliance with UK GDPR and Data Protection Act 2018.
+4. **Performance Engineering:** Sub-second mobile loading speeds (LCP < 0.8s), WCAG 2.2 AA accessibility, and 95+ Google Lighthouse scores guaranteed.
+
+## Five Integrated Service Practices
+1. **SEO & Growth Marketing** (`https://techonrise.co.uk/services/seo-growth`)
+   - Technical crawl audits, Core Web Vitals remediation, entity schema graph architecture, answer-engine optimisation (AEO for Perplexity, ChatGPT & Google AI Overviews), and local Google Business Profile map pack domination.
+2. **Websites & E-Commerce** (`https://techonrise.co.uk/services/websites-ecommerce`)
+   - Bespoke Next.js/React websites, headless Shopify Plus commerce flagships, high-converting landing pages, tokenised Figma design systems, and proactive maintenance retainers.
+3. **Custom Software & Mobile Apps** (`https://techonrise.co.uk/services/software-apps`)
+   - Full-stack web applications, multi-tenant SaaS portals, bespoke internal CRMs, cross-platform iOS & Android mobile apps with offline synchronization, and fractional CTO consulting.
+4. **AI & Workflow Automation** (`https://techonrise.co.uk/services/ai-automation`)
+   - High-intent inbound lead qualification and triage bots, grounded custom AI documentation assistants, automated PDF document parsing and invoice extraction, and Make/n8n CRM orchestrations.
+5. **Hosting & Cloud Infrastructure** (`https://techonrise.co.uk/services/hosting-infrastructure`)
+   - High-availability UK cloud hosting, Cyber Essentials readiness support, automated CI/CD deployment pipelines, 24/7 synthetic 60-second uptime monitoring, and air-gapped daily snapshot backups.
+
+## Key Conversion & Resource URLs
+- **Homepage:** https://techonrise.co.uk/
+- **Free Technical SEO & Performance Audit:** https://techonrise.co.uk/free-audit
+- **Contact & Briefing:** https://techonrise.co.uk/contact
+- **Transparent Packages & Retainers:** https://techonrise.co.uk/packages
+- **Company About & Values:** https://techonrise.co.uk/about
+- **Frequently Asked Questions:** https://techonrise.co.uk/faq
+- **All Services Directory:** https://techonrise.co.uk/services
+- **All Industry Solutions:** https://techonrise.co.uk/industries
+- **All Case Studies:** https://techonrise.co.uk/case-studies
+- **All UK Locations:** https://techonrise.co.uk/locations
+
+## Industry Vertical Solutions
+- Trades & Home Services: https://techonrise.co.uk/industries/trades-home-services
+- Professional Services: https://techonrise.co.uk/industries/professional-services
+- Healthcare & Wellness: https://techonrise.co.uk/industries/healthcare-wellness
+- Retail & E-Commerce: https://techonrise.co.uk/industries/retail-ecommerce
+- Property & Construction: https://techonrise.co.uk/industries/property-construction
+- Logistics & Transport: https://techonrise.co.uk/industries/logistics-transport
+- Education & Training: https://techonrise.co.uk/industries/education-training
+- Hospitality & Venues: https://techonrise.co.uk/industries/hospitality
+- Startups & SaaS: https://techonrise.co.uk/industries/startups-saas
+
+## Regional Commercial Hubs
+- Manchester (Headquarters): https://techonrise.co.uk/locations/manchester
+- London: https://techonrise.co.uk/locations/london
+- Birmingham: https://techonrise.co.uk/locations/birmingham
+- Leeds: https://techonrise.co.uk/locations/leeds
+- Liverpool: https://techonrise.co.uk/locations/liverpool
+- Bristol: https://techonrise.co.uk/locations/bristol
+- Glasgow: https://techonrise.co.uk/locations/glasgow
+- Edinburgh: https://techonrise.co.uk/locations/edinburgh
+- Sheffield: https://techonrise.co.uk/locations/sheffield
+- Cardiff: https://techonrise.co.uk/locations/cardiff
+
+## Client Case Studies
+- Commercial HVAC Lead Generation: https://techonrise.co.uk/case-studies/greater-manchester-hvac-lead-gen
+- Luxury Retail Headless E-Commerce: https://techonrise.co.uk/case-studies/luxury-retail-ecommerce-transformation
+- Haulage & Logistics Digital Operations: https://techonrise.co.uk/case-studies/haulage-logistics-digital-operations
+- GDPR-Compliant Healthcare Clinic Portal: https://techonrise.co.uk/case-studies/healthcare-clinic-booking-gdpr-portal
+- Commercial Property Tender Hub (£12M Wins): https://techonrise.co.uk/case-studies/commercial-property-tender-portal
+- Enterprise RegTech Compliance SaaS MVP: https://techonrise.co.uk/case-studies/enterprise-compliance-saas-mvp
+
+## Legal & Compliance Notices
+- Privacy Policy: https://techonrise.co.uk/privacy-policy
+- Terms of Business: https://techonrise.co.uk/terms
+- Cookie Policy: https://techonrise.co.uk/cookie-policy
