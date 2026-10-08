@@ -6,17 +6,18 @@
 
 @layer base {
   :root {
-    --bg-main: #F8FAFC;
-    --surface-1: #FFFFFF;
-    --surface-2: #F1F5F9;
-    --border-color: rgba(15, 23, 42, 0.08);
-    --border-subtle: rgba(15, 23, 42, 0.05);
-    --text-primary: #0F172A;
-    --text-muted: #64748B;
-    --accent: #0D9488;
-    --accent-hover: #0F766E;
-    --accent-glow: rgba(13, 148, 136, 0.15);
-    --accent-secondary: #D97706;
+    --bg-main: #090D11;
+    --surface-1: #11171E;
+    --surface-2: #17202A;
+    --border-color: rgba(255, 255, 255, 0.09);
+    --border-subtle: rgba(255, 255, 255, 0.05);
+    --text-primary: #F1F5F9;
+    --text-muted: #94A3B8;
+    --accent: #2DD4BF;
+    --accent-hover: #14B8A6;
+    --accent-glow: rgba(45, 212, 191, 0.18);
+    --accent-secondary: #F59E0B;
+    color-scheme: dark;
   }
 
   html.dark {
@@ -31,6 +32,22 @@
     --accent-hover: #14B8A6;
     --accent-glow: rgba(45, 212, 191, 0.18);
     --accent-secondary: #F59E0B;
+    color-scheme: dark;
+  }
+
+  html.light {
+    --bg-main: #F8FAFC;
+    --surface-1: #FFFFFF;
+    --surface-2: #F1F5F9;
+    --border-color: rgba(15, 23, 42, 0.08);
+    --border-subtle: rgba(15, 23, 42, 0.05);
+    --text-primary: #0F172A;
+    --text-muted: #64748B;
+    --accent: #0D9488;
+    --accent-hover: #0F766E;
+    --accent-glow: rgba(13, 148, 136, 0.15);
+    --accent-secondary: #D97706;
+    color-scheme: light;
   }
 
   body {

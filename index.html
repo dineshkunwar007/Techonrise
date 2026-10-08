@@ -40,20 +40,17 @@
       });
     </script>
 
-    <!-- Anti-FOUC Theme Script -->
+    <!-- Anti-FOUC Theme Script: Defaults strictly to Dark Mode unless explicitly set to light -->
     <script>
       (function() {
         try {
           var saved = localStorage.getItem('techonrise_theme');
-          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
           if (saved === 'light') {
             document.documentElement.classList.remove('dark');
             document.documentElement.classList.add('light');
-          } else if (saved === 'dark' || (!saved && prefersDark)) {
-            document.documentElement.classList.add('dark');
-            document.documentElement.classList.remove('light');
           } else {
             document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
           }
         } catch (e) {
           document.documentElement.classList.add('dark');
