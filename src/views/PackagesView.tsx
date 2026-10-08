@@ -114,7 +114,7 @@ export const PackagesView: React.FC<{
             Flexible Retainers & Scoped Project Delivery.
           </h1>
           <p className="text-lg text-muted leading-relaxed">
-            Choose between continuous monthly growth retainers or fixed-price scoped transformation projects. Every agreement provides 100% intellectual property ownership and direct senior technical access. (Note: Listed figures represent indicative placeholder starting rates for budgeting).
+            Choose between continuous monthly growth retainers or fixed-price scoped transformation projects. Every agreement provides 100% intellectual property ownership and direct senior technical access. Figures represent indicative baseline tiers for scoping & budgeting.
           </p>
         </div>
 
@@ -188,11 +188,9 @@ export const PackagesView: React.FC<{
                       {pkg.billingFrequency}
                     </span>
                   </div>
-                  {pkg.isPlaceholder && (
-                    <span className="text-[10px] text-muted/70 font-mono block uppercase">
-                      Placeholder Pricing
-                    </span>
-                  )}
+                  <span className="text-[10px] text-accent font-mono block uppercase font-medium">
+                    Indicative Tier
+                  </span>
                 </div>
 
                 <p className="text-xs text-muted leading-relaxed">

@@ -33,7 +33,7 @@ export const CompanyOverview: React.FC<CompanyOverviewProps> = ({ onNavigate }) 
 
             {/* Three Pillar Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-              <div className="p-4 rounded-xl bg-[var(--surface-2)] border border-subtle space-y-2">
+              <div className="p-4 rounded-xl bg-[var(--surface-2)] border border-subtle hover-card-elevate space-y-2">
                 <Zap className="w-5 h-5 text-accent" />
                 <h3 className="text-sm font-semibold text-main">01. Grow</h3>
                 <p className="text-xs text-muted leading-relaxed">
@@ -41,7 +41,7 @@ export const CompanyOverview: React.FC<CompanyOverviewProps> = ({ onNavigate }) 
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-[var(--surface-2)] border border-subtle space-y-2">
+              <div className="p-4 rounded-xl bg-[var(--surface-2)] border border-subtle hover-card-elevate space-y-2">
                 <Cpu className="w-5 h-5 text-[#E7B65C]" />
                 <h3 className="text-sm font-semibold text-main">02. Automate</h3>
                 <p className="text-xs text-muted leading-relaxed">
@@ -49,7 +49,7 @@ export const CompanyOverview: React.FC<CompanyOverviewProps> = ({ onNavigate }) 
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-[var(--surface-2)] border border-subtle space-y-2">
+              <div className="p-4 rounded-xl bg-[var(--surface-2)] border border-subtle hover-card-elevate space-y-2">
                 <Layers className="w-5 h-5 text-accent" />
                 <h3 className="text-sm font-semibold text-main">03. Modernise</h3>
                 <p className="text-xs text-muted leading-relaxed">

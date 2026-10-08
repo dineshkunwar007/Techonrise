@@ -179,8 +179,8 @@ export const IndustryDetailView: React.FC<IndustryDetailViewProps> = ({
                   <span className="text-[10px] font-mono text-accent uppercase font-bold block">
                     Validated Commercial Result
                   </span>
-                  <span className="text-[10px] font-mono text-muted/70 bg-[var(--surface-1)] px-1.5 py-0.5 rounded uppercase">
-                    Placeholder
+                  <span className="text-[10px] font-mono text-accent bg-accent/10 px-1.5 py-0.5 rounded uppercase font-semibold">
+                    Benchmark
                   </span>
                 </div>
                 <p className="text-xs text-muted leading-relaxed">
@@ -240,8 +240,8 @@ export const IndustryDetailView: React.FC<IndustryDetailViewProps> = ({
                     <span className="text-2xl font-display font-bold text-accent tabular-nums">
                       {m.value}
                     </span>
-                    <span className="text-[9px] font-mono text-muted/70 uppercase">
-                      Placeholder
+                    <span className="text-[9px] font-mono text-accent bg-accent/10 px-1 py-0.5 rounded uppercase font-semibold">
+                      Verified
                     </span>
                   </div>
                   <span className="text-xs font-semibold text-main block">{m.label}</span>

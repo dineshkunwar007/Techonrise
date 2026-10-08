@@ -2,7 +2,7 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig, Plugin } from 'vite';
-import { contactFormSchema, auditFormSchema } from './src/lib/formSchemas';
+import { contactFormSchema, auditFormSchema } from './src/lib/formSchemas.ts';
 
 // Simple in-memory rate-limiter stub: max 10 requests per minute per IP
 const requestCounts = new Map<string, { count: number; resetTime: number }>();

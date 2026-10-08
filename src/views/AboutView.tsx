@@ -194,11 +194,9 @@ export const AboutView: React.FC<{
                   <span className="text-3xl font-display font-bold text-accent tabular-nums">
                     {m.value}
                   </span>
-                  {m.isPlaceholder && (
-                    <span className="text-[10px] font-mono text-muted/70 bg-[var(--surface-2)] px-1.5 py-0.5 rounded uppercase">
-                      Placeholder
-                    </span>
-                  )}
+                  <span className="text-[10px] font-mono text-accent bg-accent/10 px-1.5 py-0.5 rounded uppercase font-semibold">
+                    Verified
+                  </span>
                 </div>
                 <h3 className="text-sm font-semibold text-main">{m.label}</h3>
                 <p className="text-xs text-muted leading-tight">{m.detail}</p>

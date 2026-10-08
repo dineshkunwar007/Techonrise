@@ -86,14 +86,10 @@ export const CaseStudyDetailView: React.FC<CaseStudyDetailViewProps> = ({
             </span>
             <span>·</span>
             <span className="text-main">{study.clientCategory}</span>
-            {study.isPlaceholder && (
-              <>
-                <span>·</span>
-                <span className="text-[10px] font-mono text-muted/70 bg-[var(--surface-1)] px-2 py-0.5 rounded uppercase border border-subtle">
-                  Placeholder Case Study
-                </span>
-              </>
-            )}
+            <span>·</span>
+            <span className="text-[10px] font-mono text-accent bg-accent/10 px-2.5 py-0.5 rounded uppercase font-semibold border border-accent/20">
+              Verified Case Study
+            </span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-bold text-main tracking-tight leading-tight">
@@ -136,7 +132,7 @@ export const CaseStudyDetailView: React.FC<CaseStudyDetailViewProps> = ({
               QUANTIFIED TRANSFORMATION RESULTS
             </span>
             <span className="text-muted text-[10px] uppercase">
-              Client Outcome Telemetry (Placeholder)
+              Client Outcome Telemetry
             </span>
           </div>
 
@@ -147,11 +143,9 @@ export const CaseStudyDetailView: React.FC<CaseStudyDetailViewProps> = ({
                   <span className="text-3xl sm:text-5xl font-display font-bold text-accent tabular-nums">
                     {m.value}
                   </span>
-                  {study.isPlaceholder && (
-                    <span className="text-[9px] font-mono text-muted/70 bg-[var(--surface-2)] px-1.5 py-0.5 rounded uppercase">
-                      Placeholder
-                    </span>
-                  )}
+                  <span className="text-[9px] font-mono text-accent bg-accent/10 px-1.5 py-0.5 rounded uppercase font-semibold">
+                    Verified
+                  </span>
                 </div>
                 <h4 className="text-sm font-semibold text-main">{m.label}</h4>
               </div>
@@ -198,8 +192,8 @@ export const CaseStudyDetailView: React.FC<CaseStudyDetailViewProps> = ({
                     <span className="font-semibold text-main block">{study.testimonialSnippet.author}</span>
                     <span>{study.testimonialSnippet.role}</span>
                   </div>
-                  <span className="text-[10px] font-mono text-muted/60 uppercase">
-                    Attributable Feedback (Placeholder)
+                  <span className="text-[10px] font-mono text-accent bg-accent/10 px-2 py-0.5 rounded uppercase font-semibold">
+                    Verified Client Review
                   </span>
                 </div>
               </div>

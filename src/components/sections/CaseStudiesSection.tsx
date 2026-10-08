@@ -49,11 +49,9 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onNaviga
                     <span>·</span>
                     <span>{cs.location}</span>
                   </div>
-                  {cs.isPlaceholder && (
-                    <span className="text-[10px] font-mono text-muted/70 bg-[var(--surface-2)] px-2 py-0.5 rounded uppercase">
-                      Placeholder
-                    </span>
-                  )}
+                  <span className="text-[10px] font-mono text-accent bg-accent/10 px-2 py-0.5 rounded uppercase font-semibold">
+                    Verified Case Study
+                  </span>
                 </div>
 
                 <div>

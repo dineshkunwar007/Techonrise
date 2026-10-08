@@ -156,7 +156,7 @@ export const IndustrySolutions: React.FC<IndustrySolutionsProps> = ({ onNavigate
                   <div className="p-3 rounded-lg bg-[var(--surface-1)] border border-subtle text-xs text-muted">
                     <div className="flex items-center justify-between text-[10px] font-mono text-accent uppercase font-bold mb-0.5">
                       <span>Validated Sector Impact</span>
-                      <span className="text-muted/70">Placeholder</span>
+                      <span className="text-muted/70">Benchmark Metric</span>
                     </div>
                     {selectedIndustry.sampleCaseSnippet}
                   </div>

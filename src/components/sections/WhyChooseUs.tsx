@@ -62,12 +62,17 @@ export const WhyChooseUs: React.FC = () => {
           {pillars.map((pillar, idx) => (
             <div
               key={idx}
-              className="p-6 sm:p-7 rounded-2xl bg-[var(--surface-2)] border border-subtle hover:border-accent/40 transition-all duration-200 space-y-3"
+              className="p-6 sm:p-7 rounded-2xl bg-[var(--surface-2)] border border-subtle hover-card-elevate space-y-3 relative group"
             >
-              <div className="p-2.5 rounded-lg bg-[var(--surface-1)] border border-subtle w-fit">
-                {pillar.icon}
+              <div className="flex items-center justify-between">
+                <div className="p-2.5 rounded-lg bg-[var(--surface-1)] border border-subtle w-fit shadow-2xs">
+                  {pillar.icon}
+                </div>
+                <span className="font-mono text-xs text-muted/60 group-hover:text-accent transition-colors">
+                  0{idx + 1}
+                </span>
               </div>
-              <h3 className="text-lg font-semibold text-main">
+              <h3 className="text-base sm:text-lg font-semibold text-main group-hover:text-accent transition-colors">
                 {pillar.title}
               </h3>
               <p className="text-xs sm:text-sm text-muted leading-relaxed">

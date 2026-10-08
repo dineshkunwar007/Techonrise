@@ -216,20 +216,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </a>
             <span>·</span>
             <a
-              href="/dev/ui"
-              onClick={(e) => handleLinkClick(e, '/dev/ui')}
-              className="text-amber-400/80 hover:text-amber-300 transition-colors font-mono"
+              href="/locations"
+              onClick={(e) => handleLinkClick(e, '/locations')}
+              className="hover:text-main transition-colors"
             >
-              UI Kit [Dev]
-            </a>
-            <span>·</span>
-            <a
-              href="/llms.txt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:underline font-mono"
-            >
-              llms.txt
+              UK Coverage
             </a>
           </div>
         </div>

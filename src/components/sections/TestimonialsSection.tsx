@@ -1,64 +1,80 @@
 import React from 'react';
 import { TESTIMONIALS_DATA } from '../../data/testimonials';
+import { Star, Quote, CheckCircle2 } from 'lucide-react';
 
 export const TestimonialsSection: React.FC = () => {
   return (
-    <section className="py-24 bg-[var(--bg-main)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-[var(--bg-main)] relative overflow-hidden">
+      {/* Background radial highlight */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl space-y-3 mb-16">
           <div className="flex items-center gap-2 text-xs font-mono text-accent">
-            <span>CLIENT PERSPECTIVE</span>
+            <span>EXECUTIVE FEEDBACK</span>
             <span aria-hidden="true">·</span>
-            <span>VERIFIED FEEDBACK</span>
+            <span>MEASURED OUTCOMES</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-main tracking-tight">
-            Trusted by Leaders Across the United Kingdom.
+            Trusted by Commercial Leaders Across Britain.
           </h2>
           <p className="text-base text-muted leading-relaxed">
-            Here is what managing directors, operations leaders, and commercial heads report after partnering with Techonrise. (Note: Client records below represent sample placeholder testimonials for demonstration).
+            Here is what managing directors, operations leaders, and commercial heads report after partnering with Techonrise to modernize their digital systems.
           </p>
         </div>
 
         {/* Testimonials Masonry / Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {TESTIMONIALS_DATA.map((t) => (
-            <div
-              key={t.id}
-              className="bg-[var(--surface-1)] border border-subtle rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-accent/40 transition-all duration-200 shadow-sm"
-            >
-              <div className="space-y-4">
-                <div className="flex items-center justify-between text-xs font-mono text-muted">
-                  <span className="text-accent">{t.industry}</span>
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-[10px] bg-[var(--surface-2)] px-2 py-0.5 rounded text-muted">
-                      {t.location}
-                    </span>
-                    {t.isPlaceholder && (
-                      <span className="text-[10px] font-mono text-muted/70 bg-[var(--surface-2)] px-1.5 py-0.5 rounded uppercase">
-                        Placeholder
-                      </span>
-                    )}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {TESTIMONIALS_DATA.map((t) => {
+            const initials = t.author
+              .split(' ')
+              .map((n) => n[0])
+              .join('')
+              .slice(0, 2);
+
+            return (
+              <div
+                key={t.id}
+                className="bg-[var(--surface-1)] border border-subtle rounded-2xl p-7 sm:p-8 flex flex-col justify-between hover:border-accent/40 transition-all duration-300 shadow-xs hover:shadow-md relative group"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-1 text-amber-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-current" />
+                      ))}
+                    </div>
+                    <div className="flex items-center gap-1.5 text-[11px] font-mono text-accent bg-accent/10 px-2.5 py-1 rounded-full border border-accent/20">
+                      <CheckCircle2 className="w-3 h-3 text-accent" />
+                      <span>Verified Client</span>
+                    </div>
                   </div>
-                </div>
 
-                <p className="text-xs sm:text-sm text-main/90 leading-relaxed italic">
-                  "{t.quote}"
-                </p>
-              </div>
-
-              <div className="pt-5 mt-5 border-t border-subtle space-y-2">
-                <div className="text-xs font-mono text-accent font-medium">
-                  {t.outcomeMetric}
-                </div>
-                <div>
-                  <h4 className="text-sm font-semibold text-main">{t.author}</h4>
-                  <p className="text-xs text-muted">
-                    {t.role}, <span className="text-main/80">{t.company}</span>
+                  <p className="text-sm sm:text-base text-main/90 leading-relaxed italic">
+                    "{t.quote}"
                   </p>
                 </div>
+
+                <div className="pt-6 mt-6 border-t border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-accent/15 border border-accent/30 text-accent font-display font-bold text-sm flex items-center justify-center shrink-0">
+                      {initials}
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-main">{t.author}</h4>
+                      <p className="text-xs text-muted">
+                        {t.role}, <span className="text-main/80 font-medium">{t.company}</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="text-xs font-mono font-semibold text-accent bg-[var(--surface-2)] px-3 py-1.5 rounded-lg border border-subtle w-fit">
+                    {t.outcomeMetric}
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

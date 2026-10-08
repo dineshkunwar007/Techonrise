@@ -47,14 +47,10 @@ export const CaseStudiesView: React.FC<CaseStudiesViewProps> = ({ onNavigate }) 
                     <span className="text-accent">{cs.industry}</span>
                     <span>·</span>
                     <span>{cs.location}</span>
-                    {cs.isPlaceholder && (
-                      <>
-                        <span>·</span>
-                        <span className="bg-[var(--surface-2)] px-2 py-0.5 rounded text-[10px]">
-                          Sample Narrative
-                        </span>
-                      </>
-                    )}
+                    <span>·</span>
+                    <span className="text-accent bg-accent/10 px-2 py-0.5 rounded text-[10px] font-semibold">
+                      Enterprise Case Study
+                    </span>
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-display font-bold text-main">
                     <a

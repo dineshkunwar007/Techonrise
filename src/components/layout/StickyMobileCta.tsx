@@ -32,9 +32,9 @@ export const StickyMobileCta: React.FC<StickyMobileCtaProps> = ({
             onNavigate('/contact');
           }
         }}
-        className="flex-1 min-h-[46px] px-4 py-2.5 rounded-xl bg-accent text-[#0C0F12] font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-transform cursor-pointer"
+        className="flex-1 min-h-[46px] px-4 py-2.5 rounded-xl bg-teal-700 text-white dark:bg-[#2DD4BF] dark:text-[#0C0F12] font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-transform cursor-pointer"
       >
-        <Calendar className="w-4 h-4 shrink-0 text-[#0C0F12]" aria-hidden="true" />
+        <Calendar className="w-4 h-4 shrink-0 text-white dark:text-[#0C0F12]" aria-hidden="true" />
         <span>Book Consultation</span>
       </button>
 

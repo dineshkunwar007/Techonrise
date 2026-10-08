@@ -14,13 +14,13 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 'md', showTag
   };
 
   const iconSizes = {
-    sm: 20,
-    md: 26,
-    lg: 32,
+    sm: 24,
+    md: 30,
+    lg: 36,
   };
 
   return (
-    <div className={`inline-flex items-center gap-2.5 select-none ${className}`}>
+    <div className={`inline-flex items-center gap-2.5 select-none group cursor-pointer ${className}`}>
       {/* Abstract Rising Step Mark */}
       <svg
         width={iconSizes[size]}
@@ -31,13 +31,46 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 'md', showTag
         className="shrink-0 transition-transform duration-300 group-hover:scale-105"
         aria-hidden="true"
       >
-        <rect width="32" height="32" rx="7" className="fill-[#141A1F] dark:fill-[#141A1F] light:fill-[#ECE9E2]" />
+        <rect
+          width="32"
+          height="32"
+          rx="8"
+          className="fill-slate-100 dark:fill-[#141A21] stroke-slate-200 dark:stroke-white/10"
+          strokeWidth="1"
+        />
         {/* Three rising monolithic pillars symbolizing digital ascension: Search -> Systems -> AI */}
-        <rect x="7" y="17" width="4" height="8" rx="1.5" className="fill-[#94A3A0] dark:fill-[#94A3A0] light:fill-[#56635F]" />
-        <rect x="14" y="12" width="4" height="13" rx="1.5" className="fill-[#2DD4BF] dark:fill-[#2DD4BF] light:fill-[#0F766E]" />
-        <rect x="21" y="7" width="4" height="18" rx="1.5" className="fill-[#E7B65C] dark:fill-[#E7B65C] light:fill-[#D97706]" />
+        <rect
+          x="7"
+          y="18"
+          width="4"
+          height="7"
+          rx="1.5"
+          className="fill-slate-400 dark:fill-[#94A3B8]"
+        />
+        <rect
+          x="14"
+          y="12"
+          width="4"
+          height="13"
+          rx="1.5"
+          className="fill-teal-600 dark:fill-[#2DD4BF]"
+        />
+        <rect
+          x="21"
+          y="7"
+          width="4"
+          height="18"
+          rx="1.5"
+          className="fill-amber-500 dark:fill-[#F59E0B]"
+        />
         {/* Subtle rising diagonal trajectory */}
-        <path d="M7 16L14 11L21 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" className="text-[#2DD4BF] opacity-50" />
+        <path
+          d="M7 16L14 10.5L21 5.5"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          className="text-teal-600 dark:text-[#2DD4BF] opacity-60"
+        />
       </svg>
 
       <div className="flex flex-col">
@@ -45,7 +78,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 'md', showTag
           Techon<span className="text-accent">rise</span>
         </span>
         {showTagline && (
-          <span className="text-[10px] uppercase tracking-wider text-muted font-mono">
+          <span className="text-[10px] uppercase tracking-wider text-muted font-mono -mt-0.5">
             Digital Transformation UK
           </span>
         )}

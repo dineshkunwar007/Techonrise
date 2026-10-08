@@ -102,8 +102,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, onNavigate, onOpenC
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[var(--bg-main)]/90 backdrop-blur-md border-b border-subtle py-3 shadow-sm'
-            : 'bg-transparent py-5'
+            ? 'bg-[var(--bg-main)]/92 backdrop-blur-md border-b border-subtle py-3 shadow-sm'
+            : 'bg-[var(--bg-main)]/60 backdrop-blur-md py-4 sm:py-5 border-b border-subtle/30'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -147,8 +147,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, onNavigate, onOpenC
 
                 {/* Services Mega Menu Dropdown */}
                 {servicesDropdownOpen && (
-                  <div className="absolute top-full -left-20 w-[780px] pt-3 animate-in fade-in slide-in-from-top-2 duration-200">
-                    <div className="bg-[var(--surface-1)] border border-subtle rounded-xl p-6 shadow-2xl backdrop-blur-xl">
+                  <div className="absolute top-full -left-20 w-[800px] pt-3 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="bg-[var(--surface-1)] border border-subtle rounded-2xl p-6 shadow-2xl backdrop-blur-2xl ring-1 ring-white/10 dark:ring-white/10">
                       <div className="flex items-center justify-between pb-4 mb-4 border-b border-subtle">
                         <div>
                           <span className="text-xs font-mono uppercase tracking-wider text-accent font-semibold">
