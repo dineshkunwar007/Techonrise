@@ -113,11 +113,11 @@ export const ProcessTimeline: React.FC = () => {
   const activeStep = steps[activeStepIndex];
 
   return (
-    <section id="process-timeline" className="py-24 bg-[var(--surface-1)] border-y border-subtle relative overflow-hidden">
+    <section id="process-timeline" className="py-14 sm:py-20 lg:py-24 bg-[var(--surface-1)] border-y border-subtle relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl space-y-3 mb-14">
+        <div className="max-w-3xl space-y-3 mb-8 sm:mb-14">
           <div className="flex items-center gap-2 text-xs font-mono text-accent">
             <span>METHODOLOGY & EXECUTION</span>
             <span aria-hidden="true">·</span>
@@ -132,13 +132,13 @@ export const ProcessTimeline: React.FC = () => {
         </div>
 
         {/* Standout Visual Moment: Interactive Step-Scrubber Timeline Bar */}
-        <div className="bg-[var(--surface-2)] border border-subtle rounded-2xl p-4 sm:p-6 mb-8 shadow-xs">
-          <div className="flex items-center justify-between pb-4 mb-4 border-b border-subtle text-xs font-mono">
+        <div className="bg-[var(--surface-2)] border border-subtle rounded-2xl p-3.5 sm:p-6 mb-8 shadow-xs">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 sm:pb-4 mb-4 border-b border-subtle text-xs font-mono">
             <span className="text-muted uppercase tracking-wider font-semibold">
               Interactive Stage Scrubber
             </span>
             <span className="text-accent font-semibold flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5" />
+              <Clock className="w-3.5 h-3.5 shrink-0" />
               Active Phase: {activeStep.number} {activeStep.title} ({activeStep.duration})
             </span>
           </div>
@@ -214,7 +214,7 @@ export const ProcessTimeline: React.FC = () => {
         </div>
 
         {/* Active Stage Deep-Dive Showcase (Standout Asymmetric Card) */}
-        <div className="bg-[var(--surface-2)] border border-subtle rounded-3xl p-6 sm:p-10 shadow-sm relative">
+        <div className="bg-[var(--surface-2)] border border-subtle rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 shadow-sm relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
             {/* Left Column: Stage Detail & Deliverables */}
@@ -243,7 +243,7 @@ export const ProcessTimeline: React.FC = () => {
               </div>
 
               {/* Tangible Deliverables Checklist */}
-              <div className="bg-[var(--surface-1)] p-5 rounded-2xl border border-subtle space-y-3">
+              <div className="bg-[var(--surface-1)] p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-subtle space-y-3">
                 <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-accent font-semibold">
                   <Layers className="w-3.5 h-3.5" />
                   <span>Phase Deliverables & Artifacts</span>
@@ -299,7 +299,7 @@ export const ProcessTimeline: React.FC = () => {
             </div>
 
             {/* Right Column: Technical Execution Terminal / Code Artifact Preview */}
-            <div className="lg:col-span-5 bg-[var(--surface-1)] border border-subtle rounded-2xl p-5 sm:p-6 shadow-xs flex flex-col justify-between space-y-4">
+            <div className="lg:col-span-5 bg-[var(--surface-1)] border border-subtle rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-xs flex flex-col justify-between space-y-4">
               <div className="space-y-3">
                 <div className="flex items-center justify-between pb-3 border-b border-subtle text-xs font-mono">
                   <div className="flex items-center gap-2 text-muted">
@@ -311,8 +311,8 @@ export const ProcessTimeline: React.FC = () => {
                   </span>
                 </div>
 
-                <div className="bg-[var(--bg-main)] p-4 rounded-xl border border-subtle font-mono text-xs leading-relaxed overflow-x-auto text-main/90">
-                  <pre className="text-[11px] text-muted whitespace-pre-wrap">
+                <div className="bg-[var(--bg-main)] p-3 sm:p-4 rounded-xl border border-subtle font-mono text-xs leading-relaxed overflow-x-auto text-main/90">
+                  <pre className="text-[11px] text-muted whitespace-pre-wrap break-all sm:break-normal">
                     <code>{activeStep.codeSnippet}</code>
                   </pre>
                 </div>

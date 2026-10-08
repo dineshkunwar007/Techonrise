@@ -27,31 +27,31 @@ export const ServicesShowcase: React.FC<ServicesShowcaseProps> = ({ onNavigate }
   };
 
   return (
-    <section id="services-showcase" className="py-24 relative overflow-hidden bg-[var(--surface-1)] border-y border-subtle">
+    <section id="services-showcase" className="py-14 sm:py-20 lg:py-24 relative overflow-hidden bg-[var(--surface-1)] border-y border-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header with answer-first intro for SEO */}
-        <div className="max-w-3xl space-y-3 mb-14">
+        <div className="max-w-3xl space-y-3 mb-10 sm:mb-14">
           <div className="flex items-center gap-2 text-xs font-mono text-accent">
             <span>CAPABILITIES ARCHITECTURE</span>
             <span aria-hidden="true">·</span>
             <span>01 TO 05 INTEGRATED PRACTICES</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-main tracking-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-display font-bold text-main tracking-tight">
             Integrated Digital Capabilities. Zero Vendor Fragmentation.
           </h2>
-          <p className="text-base text-muted leading-relaxed">
+          <p className="text-sm sm:text-base text-muted leading-relaxed">
             Techonrise combines growth marketing, bespoke software engineering, mobile development, practical AI automations, and cloud infrastructure under one UK roof. We bridge the gap between creative agencies that cannot write software and software shops that don’t understand commercial growth.
           </p>
         </div>
 
         {/* Sophisticated Combination: Sticky Side Navigation + Split Layered Detail Panel */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          {/* Left Column: Sticky Category Side-Navigation on desktop */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
+          {/* Left Column: Responsive Category Navigation (Horizontal scrollable pills on mobile, sticky sidebar on desktop) */}
           <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-muted px-2 block font-semibold mb-3">
+            <span className="text-xs font-mono uppercase tracking-wider text-muted px-2 block font-semibold mb-2 sm:mb-3">
               Delivery Practices
             </span>
-            <div className="space-y-1.5 bg-[var(--surface-2)] p-2 rounded-2xl border border-subtle">
+            <div className="flex lg:flex-col overflow-x-auto lg:overflow-visible gap-1.5 bg-[var(--surface-2)] p-1.5 sm:p-2 rounded-2xl border border-subtle scrollbar-none pb-2 lg:pb-2">
               {SERVICES_DATA.map((cat) => {
                 const isActive = cat.id === activeCategoryId;
                 return (
@@ -62,19 +62,19 @@ export const ServicesShowcase: React.FC<ServicesShowcaseProps> = ({ onNavigate }
                       setActiveCategoryId(cat.id);
                       setOpenSubServiceId(cat.subServices[0].id);
                     }}
-                    className={`w-full text-left p-3.5 rounded-xl text-xs sm:text-sm transition-all duration-200 flex items-center justify-between cursor-pointer group select-none ${
+                    className={`shrink-0 lg:shrink text-left p-2.5 sm:p-3.5 rounded-xl text-xs sm:text-sm transition-all duration-200 flex items-center justify-between cursor-pointer group select-none whitespace-nowrap lg:whitespace-normal ${
                       isActive
                         ? 'bg-[var(--surface-1)] text-main font-semibold shadow-xs border border-accent/40'
                         : 'text-muted hover:text-main hover:bg-[var(--surface-1)]/50 border border-transparent'
                     }`}
                   >
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2 sm:gap-3">
                       <span className="font-mono text-xs text-accent">
                         {cat.categoryNumber}.
                       </span>
-                      <span className="truncate">{cat.title}</span>
+                      <span>{cat.title}</span>
                     </div>
-                    <span className="text-[11px] font-mono text-muted/80 bg-[var(--surface-2)] px-2 py-0.5 rounded">
+                    <span className="text-[11px] font-mono text-muted/80 bg-[var(--surface-2)] px-2 py-0.5 rounded ml-2.5 hidden sm:inline">
                       {cat.subServices.length}
                     </span>
                   </button>
@@ -89,12 +89,12 @@ export const ServicesShowcase: React.FC<ServicesShowcaseProps> = ({ onNavigate }
           </div>
 
           {/* Right Column: Layered Split Detail Panel + Accordion for Sub-Services */}
-          <div className="lg:col-span-8 bg-[var(--surface-2)] border border-subtle rounded-3xl p-6 sm:p-10 space-y-8 shadow-sm">
+          <div className="lg:col-span-8 bg-[var(--surface-2)] border border-subtle rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 space-y-6 sm:space-y-8 shadow-sm">
             {/* Active Category Header */}
             <div className="space-y-3 pb-6 border-b border-subtle">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-2.5">
                 <div className="flex items-center gap-2">
-                  <div className="p-2 rounded-lg bg-[var(--surface-1)] border border-subtle">
+                  <div className="p-2 rounded-lg bg-[var(--surface-1)] border border-subtle shrink-0">
                     {categoryIcons[activeCategory.id]}
                   </div>
                   <span className="text-xs font-mono text-accent font-semibold uppercase">
@@ -108,7 +108,7 @@ export const ServicesShowcase: React.FC<ServicesShowcaseProps> = ({ onNavigate }
                     e.preventDefault();
                     onNavigate(`/services/${activeCategory.slug}`);
                   }}
-                  className="text-xs text-accent hover:underline flex items-center gap-1 font-medium"
+                  className="text-xs text-accent hover:underline flex items-center gap-1 font-medium w-fit"
                 >
                   View Practice Blueprint <ArrowRight className="w-3 h-3" />
                 </a>

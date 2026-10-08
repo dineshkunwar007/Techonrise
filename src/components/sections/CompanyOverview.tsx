@@ -8,9 +8,9 @@ interface CompanyOverviewProps {
 
 export const CompanyOverview: React.FC<CompanyOverviewProps> = ({ onNavigate }) => {
   return (
-    <section className="py-24 bg-[var(--surface-1)] border-t border-subtle">
+    <section className="py-14 sm:py-20 lg:py-24 bg-[var(--surface-1)] border-t border-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Mission & Strategic Philosophy */}
           <div className="lg:col-span-6 space-y-6">
             <div className="flex items-center gap-2 text-xs font-mono text-accent">
@@ -58,10 +58,11 @@ export const CompanyOverview: React.FC<CompanyOverviewProps> = ({ onNavigate }) 
               </div>
             </div>
 
-            <div className="pt-2 flex items-center gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <Button
                 variant="primary"
                 size="md"
+                className="w-full sm:w-auto"
                 onClick={() => onNavigate('/about')}
                 icon={<ArrowRight className="w-4 h-4" />}
               >
@@ -70,6 +71,7 @@ export const CompanyOverview: React.FC<CompanyOverviewProps> = ({ onNavigate }) 
               <Button
                 variant="outline"
                 size="md"
+                className="w-full sm:w-auto"
                 onClick={() => onNavigate('/free-audit')}
               >
                 Free Digital Audit
@@ -79,7 +81,7 @@ export const CompanyOverview: React.FC<CompanyOverviewProps> = ({ onNavigate }) 
 
           {/* Right Column: Architectural Comparison Graphic */}
           <div className="lg:col-span-6">
-            <div className="bg-[var(--surface-2)] border border-subtle rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
+            <div className="bg-[var(--surface-2)] border border-subtle rounded-xl sm:rounded-2xl p-4 sm:p-8 space-y-6 shadow-sm">
               <div className="flex items-center justify-between pb-4 border-b border-subtle">
                 <span className="text-xs font-mono uppercase tracking-wider text-muted font-semibold">
                   Operating Model Contrast
@@ -99,7 +101,7 @@ export const CompanyOverview: React.FC<CompanyOverviewProps> = ({ onNavigate }) 
               </div>
 
               {/* The Unified Techonrise Model */}
-              <div className="p-5 rounded-xl bg-[var(--surface-1)] border border-accent/50 shadow-md space-y-3 relative">
+              <div className="p-4 sm:p-5 rounded-xl bg-[var(--surface-1)] border border-accent/50 shadow-md space-y-3 relative">
                 <div className="absolute top-3 right-3 text-[10px] font-mono text-accent bg-accent/10 px-2 py-0.5 rounded">
                   Unified Stack
                 </div>
@@ -110,7 +112,7 @@ export const CompanyOverview: React.FC<CompanyOverviewProps> = ({ onNavigate }) 
                 <p className="text-xs text-muted leading-relaxed">
                   One aligned UK partner executing strategy, software engineering, search indexation, mobile tools, and AI workflows under unified technical leadership.
                 </p>
-                <div className="pt-2 grid grid-cols-2 gap-2 text-[11px] text-main font-mono">
+                <div className="pt-2 grid grid-cols-1 xs:grid-cols-2 gap-2 text-[11px] text-main font-mono">
                   <div className="flex items-center gap-1.5">
                     <span className="text-accent">✓</span> Sub-second Next.js
                   </div>

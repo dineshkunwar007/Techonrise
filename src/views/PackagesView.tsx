@@ -86,7 +86,7 @@ export const PackagesView: React.FC<{
   ];
 
   return (
-    <div className="pt-28 pb-20">
+    <div className="pt-24 sm:pt-28 pb-14 sm:pb-20">
       <JsonLd
         schema={[
           generateBreadcrumbSchema([{ name: 'Packages & Retainers', url: '/packages' }]),
@@ -104,25 +104,25 @@ export const PackagesView: React.FC<{
         <Breadcrumbs items={[{ name: 'Packages & Retainers', url: '/packages' }]} onNavigate={onNavigate} />
 
         {/* Hero Header */}
-        <div className="max-w-3xl space-y-4 my-8">
+        <div className="max-w-3xl space-y-4 my-6 sm:my-8">
           <div className="flex items-center gap-2 text-xs font-mono text-accent">
             <span>TRANSPARENT COMMERCIAL TIERS</span>
             <span aria-hidden="true">·</span>
             <span>SCOPED SPRINTS & RETAINERS</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-main tracking-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-display font-bold text-main tracking-tight">
             Flexible Retainers & Scoped Project Delivery.
           </h1>
-          <p className="text-lg text-muted leading-relaxed">
+          <p className="text-base sm:text-lg text-muted leading-relaxed">
             Choose between continuous monthly growth retainers or fixed-price scoped transformation projects. Every agreement provides 100% intellectual property ownership and direct senior technical access. Figures represent indicative baseline tiers for scoping & budgeting.
           </p>
         </div>
 
         {/* Segmented Filter Control */}
-        <div className="flex items-center gap-2 p-1.5 bg-[var(--surface-1)] border border-subtle rounded-xl w-fit mb-12">
+        <div className="flex items-center gap-1.5 sm:gap-2 p-1.5 bg-[var(--surface-1)] border border-subtle rounded-xl max-w-full overflow-x-auto scrollbar-none mb-8 sm:mb-12">
           <button
             onClick={() => setFilterType('all')}
-            className={`px-4 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+            className={`px-3.5 sm:px-4 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer shrink-0 whitespace-nowrap ${
               filterType === 'all'
                 ? 'bg-[var(--surface-2)] text-main font-semibold shadow-xs'
                 : 'text-muted hover:text-main'
@@ -132,17 +132,17 @@ export const PackagesView: React.FC<{
           </button>
           <button
             onClick={() => setFilterType('retainer')}
-            className={`px-4 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+            className={`px-3.5 sm:px-4 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer shrink-0 whitespace-nowrap ${
               filterType === 'retainer'
                 ? 'bg-[var(--surface-2)] text-main font-semibold shadow-xs'
                 : 'text-muted hover:text-main'
             }`}
           >
-            Monthly Retainers (7 Care & Growth Models)
+            Monthly Retainers (7 Models)
           </button>
           <button
             onClick={() => setFilterType('project')}
-            className={`px-4 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+            className={`px-3.5 sm:px-4 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer shrink-0 whitespace-nowrap ${
               filterType === 'project'
                 ? 'bg-[var(--surface-2)] text-main font-semibold shadow-xs'
                 : 'text-muted hover:text-main'
@@ -153,11 +153,11 @@ export const PackagesView: React.FC<{
         </div>
 
         {/* Packages Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 my-8">
           {filteredPackages.map((pkg) => (
             <div
               key={pkg.id}
-              className={`bg-[var(--surface-1)] border rounded-2xl p-7 flex flex-col justify-between transition-all duration-200 relative ${
+              className={`bg-[var(--surface-1)] border rounded-xl sm:rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-200 relative ${
                 pkg.isPopular
                   ? 'border-accent shadow-md ring-1 ring-accent/30'
                   : 'border-subtle hover:border-accent/40'

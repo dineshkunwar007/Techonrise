@@ -42,9 +42,9 @@ export const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-[var(--surface-1)] border-y border-subtle">
+    <section className="py-14 sm:py-20 lg:py-24 bg-[var(--surface-1)] border-y border-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl space-y-3 mb-16">
+        <div className="max-w-3xl space-y-3 mb-10 sm:mb-16">
           <div className="flex items-center gap-2 text-xs font-mono text-accent">
             <span>THE INTEGRATED ADVANTAGE</span>
             <span aria-hidden="true">·</span>
@@ -58,11 +58,11 @@ export const WhyChooseUs: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {pillars.map((pillar, idx) => (
             <div
               key={idx}
-              className="p-6 sm:p-7 rounded-2xl bg-[var(--surface-2)] border border-subtle hover-card-elevate space-y-3 relative group"
+              className="p-4 sm:p-7 rounded-xl sm:rounded-2xl bg-[var(--surface-2)] border border-subtle hover-card-elevate space-y-3 relative group"
             >
               <div className="flex items-center justify-between">
                 <div className="p-2.5 rounded-lg bg-[var(--surface-1)] border border-subtle w-fit shadow-2xs">

@@ -14,63 +14,65 @@ export const IndustrySolutions: React.FC<IndustrySolutionsProps> = ({ onNavigate
     INDUSTRIES_DATA.find((ind) => ind.slug === selectedSlug) || INDUSTRIES_DATA[0];
 
   return (
-    <section id="industry-solutions" className="py-24 bg-[var(--bg-main)]">
+    <section id="industry-solutions" className="py-14 sm:py-20 lg:py-24 bg-[var(--bg-main)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl space-y-3 mb-14">
+        <div className="max-w-3xl space-y-3 mb-10 sm:mb-14">
           <div className="flex items-center gap-2 text-xs font-mono text-accent">
             <span>TAILORED INDUSTRY BLUEPRINTS</span>
             <span aria-hidden="true">·</span>
             <span>09 SECTORS SUPPORTED</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-main tracking-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-display font-bold text-main tracking-tight">
             Engineered for Your Sector’s Exact Commercial Reality.
           </h2>
-          <p className="text-base text-muted leading-relaxed">
+          <p className="text-sm sm:text-base text-muted leading-relaxed">
             Every vertical experiences distinct operational bottlenecks, compliance rules, and customer acquisition funnels. We do not deliver generic multi-purpose templates; we assemble specific technical bundles calibrated to your industry.
           </p>
         </div>
 
         {/* Asymmetric Strategic Layout: Left Sector Selector with Tailored Promises + Right Deep Dive */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Left Column: Sector Navigation with Tailored Promises */}
-          <div className="lg:col-span-4 space-y-1.5 bg-[var(--surface-1)] p-3 rounded-2xl border border-subtle">
-            <span className="text-xs font-mono uppercase tracking-wider text-muted px-3 py-2 block font-semibold">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+          {/* Left Column: Sector Navigation (Scrollable horizontal chips on mobile, vertical list on desktop) */}
+          <div className="lg:col-span-4 space-y-1.5 bg-[var(--surface-1)] p-2 sm:p-3 rounded-2xl border border-subtle">
+            <span className="text-xs font-mono uppercase tracking-wider text-muted px-2 sm:px-3 py-1 sm:py-2 block font-semibold">
               Select Vertical
             </span>
-            {INDUSTRIES_DATA.map((ind) => {
-              const isSelected = ind.slug === selectedSlug;
-              return (
-                <button
-                  key={ind.slug}
-                  type="button"
-                  onClick={() => setSelectedSlug(ind.slug)}
-                  className={`w-full text-left px-3.5 py-3 rounded-xl transition-all flex flex-col justify-between cursor-pointer select-none ${
-                    isSelected
-                      ? 'bg-[var(--surface-2)] border border-accent/40 shadow-xs'
-                      : 'hover:bg-[var(--surface-2)]/60 border border-transparent'
-                  }`}
-                >
-                  <div className="flex items-center justify-between w-full">
-                    <span className={`text-xs sm:text-sm font-semibold truncate ${isSelected ? 'text-accent' : 'text-main'}`}>
-                      {ind.title}
-                    </span>
-                    <ArrowRight
-                      className={`w-3.5 h-3.5 shrink-0 transition-transform ${
-                        isSelected ? 'translate-x-0.5 text-accent' : 'opacity-0'
-                      }`}
-                    />
-                  </div>
-                  <p className="text-[11px] text-muted truncate mt-0.5 max-w-[280px]">
-                    {ind.headline}
-                  </p>
-                </button>
-              );
-            })}
+            <div className="flex lg:flex-col overflow-x-auto lg:overflow-visible gap-1.5 scrollbar-none pb-1.5 lg:pb-0">
+              {INDUSTRIES_DATA.map((ind) => {
+                const isSelected = ind.slug === selectedSlug;
+                return (
+                  <button
+                    key={ind.slug}
+                    type="button"
+                    onClick={() => setSelectedSlug(ind.slug)}
+                    className={`shrink-0 lg:shrink text-left px-3 py-2 sm:px-3.5 sm:py-3 rounded-xl transition-all flex flex-col justify-between cursor-pointer select-none whitespace-nowrap lg:whitespace-normal ${
+                      isSelected
+                        ? 'bg-[var(--surface-2)] border border-accent/40 shadow-xs'
+                        : 'hover:bg-[var(--surface-2)]/60 border border-transparent'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between w-full gap-2">
+                      <span className={`text-xs sm:text-sm font-semibold truncate ${isSelected ? 'text-accent' : 'text-main'}`}>
+                        {ind.title}
+                      </span>
+                      <ArrowRight
+                        className={`w-3.5 h-3.5 shrink-0 transition-transform hidden lg:block ${
+                          isSelected ? 'translate-x-0.5 text-accent' : 'opacity-0'
+                        }`}
+                      />
+                    </div>
+                    <p className="text-[11px] text-muted truncate mt-0.5 max-w-[280px] hidden sm:block">
+                      {ind.headline}
+                    </p>
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           {/* Right Column: Tailored Industry Deep Dive (Bottlenecks vs Recommended Bundle) */}
-          <div className="lg:col-span-8 bg-[var(--surface-1)] border border-subtle rounded-3xl p-6 sm:p-10 space-y-8 shadow-sm">
+          <div className="lg:col-span-8 bg-[var(--surface-1)] border border-subtle rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 space-y-6 sm:space-y-8 shadow-sm">
             <div className="space-y-3 border-b border-subtle pb-6">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-mono text-accent uppercase tracking-wider font-semibold">

@@ -86,14 +86,14 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[var(--surface-1)] border-t border-subtle">
+    <section id="contact" className="py-14 sm:py-20 lg:py-24 bg-[var(--surface-1)] border-t border-subtle">
       <JsonLd schema={generateLocalBusinessSchema()} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* Left Column: Business Info, Abstract Map & Socials */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="lg:col-span-5 space-y-6 sm:space-y-8">
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-xs font-mono text-accent">
                 <span>DIRECT ACCESS</span>
@@ -109,7 +109,7 @@ export const ContactSection: React.FC = () => {
             </div>
 
             {/* Direct Contact Credentials Card */}
-            <div className="bg-[var(--surface-2)] p-6 sm:p-7 rounded-2xl border border-subtle space-y-4 shadow-xs">
+            <div className="bg-[var(--surface-2)] p-4 sm:p-7 rounded-xl sm:rounded-2xl border border-subtle space-y-4 shadow-xs">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                 <div>
@@ -200,7 +200,7 @@ export const ContactSection: React.FC = () => {
             </div>
 
             {/* Abstract Manchester Innovation Corridor Location Panel */}
-            <div className="bg-[var(--surface-2)] border border-subtle rounded-2xl p-6 relative overflow-hidden">
+            <div className="bg-[var(--surface-2)] border border-subtle rounded-xl sm:rounded-2xl p-4 sm:p-6 relative overflow-hidden">
               <div className="flex items-center justify-between pb-3 border-b border-subtle text-xs font-mono text-muted">
                 <span>MANCHESTER CORRIDOR COORDINATES</span>
                 <span className="text-accent">53.4808° N, 2.2426° W</span>
@@ -235,7 +235,7 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* Right Column: React Hook Form + Zod Form Container */}
-          <div className="lg:col-span-7 bg-[var(--surface-2)] border border-subtle rounded-3xl p-6 sm:p-10 shadow-sm relative">
+          <div className="lg:col-span-7 bg-[var(--surface-2)] border border-subtle rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 shadow-sm relative">
             
             {/* Live Status Region for Accessibility */}
             <div aria-live="polite" className="sr-only">

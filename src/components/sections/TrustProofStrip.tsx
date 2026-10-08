@@ -43,43 +43,43 @@ export const TrustProofStrip: React.FC = () => {
   ];
 
   return (
-    <section className="bg-[var(--surface-1)] border-b border-subtle relative z-10 py-14">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <section className="bg-[var(--surface-1)] border-b border-subtle relative z-10 py-10 sm:py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
         
         {/* Row 1: Quantitative Metrics Grid */}
-        <div className="bg-[var(--surface-2)] border border-subtle rounded-2xl p-6 sm:p-8 shadow-xs relative overflow-hidden">
+        <div className="bg-[var(--surface-2)] border border-subtle rounded-2xl p-4 sm:p-8 shadow-xs relative overflow-hidden">
           {/* Subtle background glow */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-6 border-b border-subtle gap-2 text-xs font-mono">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 sm:pb-4 mb-4 sm:mb-6 border-b border-subtle gap-2 text-xs font-mono">
             <span className="text-muted uppercase tracking-wider font-semibold flex items-center gap-2">
               <TrendingUp className="w-3.5 h-3.5 text-accent" />
               Verified Performance Telemetry
             </span>
-            <span className="text-accent flex items-center gap-1.5 font-semibold bg-accent/10 px-2.5 py-1 rounded-full border border-accent/20 w-fit">
+            <span className="text-accent flex items-center gap-1.5 font-semibold bg-accent/10 px-2.5 py-1 rounded-full border border-accent/20 w-fit text-[11px] sm:text-xs">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
               Direct Client Engineering Baselines
             </span>
           </div>
 
-          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 divide-y xs:divide-y-0 sm:divide-x divide-subtle">
-            {PLACEHOLDER_METRICS.map((metric, idx) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
+            {PLACEHOLDER_METRICS.map((metric) => (
               <div
                 key={metric.label}
-                className={`${idx > 0 ? 'pt-4 xs:pt-0 sm:pl-6' : ''} space-y-1.5 group`}
+                className="space-y-1 group p-2.5 sm:p-0 rounded-xl bg-[var(--surface-1)]/50 sm:bg-transparent border border-subtle/60 sm:border-0"
               >
-                <div className="flex items-baseline gap-2">
-                  <span className="text-3xl sm:text-4xl font-display font-extrabold text-accent tabular-nums tracking-tight">
+                <div className="flex flex-wrap items-baseline gap-1.5 sm:gap-2">
+                  <span className="text-2xl sm:text-4xl font-display font-extrabold text-accent tabular-nums tracking-tight">
                     {metric.value}
                   </span>
-                  <span className="text-[10px] font-mono text-accent bg-accent/10 px-2 py-0.5 rounded uppercase font-semibold">
+                  <span className="text-[9px] sm:text-[10px] font-mono text-accent bg-accent/10 px-1.5 py-0.5 rounded uppercase font-semibold">
                     Verified
                   </span>
                 </div>
-                <h3 className="text-sm font-semibold text-main">
+                <h3 className="text-xs sm:text-sm font-semibold text-main">
                   {metric.label}
                 </h3>
-                <p className="text-xs text-muted leading-tight">
+                <p className="text-[11px] sm:text-xs text-muted leading-tight">
                   {metric.detail}
                 </p>
               </div>

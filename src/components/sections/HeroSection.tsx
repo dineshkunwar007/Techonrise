@@ -41,20 +41,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenCons
 
             {/* Display Headline: Clean, beautifully aligned, with 100% visible typography */}
             <div className="space-y-4">
-              <h1 className="text-4xl xs:text-5xl sm:text-6xl lg:text-[4.25rem] font-bold text-main tracking-tight leading-[1.12]">
+              <h1 className="text-3xl sm:text-5xl lg:text-[4.25rem] font-bold text-main tracking-tight leading-[1.14]">
                 Grow, Automate <br className="hidden sm:inline" />
                 <span className="text-teal-600 dark:text-teal-400">&amp; Modernise</span>{' '}
                 Your Business.
               </h1>
 
               {/* Sub-headline / Positioning Statement */}
-              <p className="text-base sm:text-lg lg:text-xl text-muted leading-relaxed font-normal max-w-2xl">
+              <p className="text-sm sm:text-lg lg:text-xl text-muted leading-relaxed font-normal max-w-2xl">
                 Techonrise unifies technical SEO, bespoke web applications, cloud architecture, and practical AI automations into one accountable, UK-based engineering team.
               </p>
             </div>
 
-            {/* Primary Action Zone */}
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 max-w-md sm:max-w-none">
+            {/* Primary Action Zone: Ergonomic on mobile */}
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 max-w-md sm:max-w-none">
               <Button
                 size="lg"
                 variant="primary"
@@ -66,65 +66,63 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenCons
                     onNavigate('/contact');
                   }
                 }}
-                className="w-full sm:w-auto min-h-[50px] shadow-md dark:shadow-[0_4px_24px_rgba(45,212,191,0.28)]"
+                className="w-full sm:w-auto min-h-[48px] sm:min-h-[50px] shadow-md dark:shadow-[0_4px_24px_rgba(45,212,191,0.28)] font-semibold"
               >
                 Book a Consultation
               </Button>
 
-              <Button
-                size="lg"
-                variant="secondary"
-                onClick={() => onNavigate('/free-audit')}
-                className="w-full sm:w-auto min-h-[50px]"
-              >
-                Claim Free Technical Audit
-              </Button>
+              <div className="grid grid-cols-2 sm:flex items-center gap-2.5 sm:gap-3">
+                <Button
+                  size="md"
+                  variant="secondary"
+                  onClick={() => onNavigate('/free-audit')}
+                  className="w-full sm:w-auto min-h-[46px] sm:min-h-[50px] text-xs sm:text-sm px-3 sm:px-5"
+                >
+                  Free Audit
+                </Button>
 
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={() => onNavigate('/case-studies')}
-                className="w-full sm:w-auto min-h-[50px]"
-              >
-                View Case Studies
-              </Button>
+                <Button
+                  size="md"
+                  variant="outline"
+                  onClick={() => onNavigate('/case-studies')}
+                  className="w-full sm:w-auto min-h-[46px] sm:min-h-[50px] text-xs sm:text-sm px-3 sm:px-5"
+                >
+                  Case Studies
+                </Button>
+              </div>
             </div>
 
-            {/* Subtle Depth Layer Card: Technical credentials & practices */}
+            {/* Depth Layer Cards: Symmetric 2x2 on mobile, 4 across on desktop */}
             <div className="pt-2 sm:pt-4">
-              <div className="p-4 sm:p-5 rounded-2xl bg-[var(--surface-1)]/85 backdrop-blur-md border border-subtle shadow-sm max-w-2xl">
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-subtle">
-                  
-                  <div className="space-y-1">
-                    <span className="text-xs font-mono text-teal-600 dark:text-teal-400 font-semibold block">01 · SEARCH</span>
-                    <span className="text-xs sm:text-sm font-semibold text-main block">Technical SEO</span>
-                    <span className="text-[11px] text-muted block">Core Web Vitals &amp; AEO</span>
-                  </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 max-w-2xl">
+                <div className="p-3 sm:p-3.5 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle shadow-2xs space-y-1">
+                  <span className="text-[11px] font-mono text-teal-600 dark:text-teal-400 font-semibold block">01 · SEARCH</span>
+                  <span className="text-xs sm:text-sm font-semibold text-main block">Technical SEO</span>
+                  <span className="text-[11px] text-muted block">Core Web Vitals &amp; AEO</span>
+                </div>
 
-                  <div className="pt-2 sm:pt-0 sm:pl-4 space-y-1">
-                    <span className="text-xs font-mono text-teal-600 dark:text-teal-400 font-semibold block">02 · SOFTWARE</span>
-                    <span className="text-xs sm:text-sm font-semibold text-main block">Next.js &amp; Apps</span>
-                    <span className="text-[11px] text-muted block">100% Code Ownership</span>
-                  </div>
+                <div className="p-3 sm:p-3.5 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle shadow-2xs space-y-1">
+                  <span className="text-[11px] font-mono text-teal-600 dark:text-teal-400 font-semibold block">02 · SOFTWARE</span>
+                  <span className="text-xs sm:text-sm font-semibold text-main block">Next.js &amp; Apps</span>
+                  <span className="text-[11px] text-muted block">100% Code Ownership</span>
+                </div>
 
-                  <div className="pt-2 sm:pt-0 sm:pl-4 space-y-1">
-                    <span className="text-xs font-mono text-amber-500 font-semibold block">03 · AI &amp; DATA</span>
-                    <span className="text-xs sm:text-sm font-semibold text-main block">AI Automation</span>
-                    <span className="text-[11px] text-muted block">CRM &amp; Vector Pipelines</span>
-                  </div>
+                <div className="p-3 sm:p-3.5 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle shadow-2xs space-y-1">
+                  <span className="text-[11px] font-mono text-amber-500 font-semibold block">03 · AI &amp; DATA</span>
+                  <span className="text-xs sm:text-sm font-semibold text-main block">AI Automation</span>
+                  <span className="text-[11px] text-muted block">CRM &amp; Vector Pipelines</span>
+                </div>
 
-                  <div className="pt-2 sm:pt-0 sm:pl-4 space-y-1">
-                    <span className="text-xs font-mono text-teal-600 dark:text-teal-400 font-semibold block">04 · SECURITY</span>
-                    <span className="text-xs sm:text-sm font-semibold text-main block">UK Sovereign</span>
-                    <span className="text-[11px] text-muted block">GDPR &amp; Cyber Ready</span>
-                  </div>
-
+                <div className="p-3 sm:p-3.5 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle shadow-2xs space-y-1">
+                  <span className="text-[11px] font-mono text-teal-600 dark:text-teal-400 font-semibold block">04 · SECURITY</span>
+                  <span className="text-xs sm:text-sm font-semibold text-main block">UK Sovereign</span>
+                  <span className="text-[11px] text-muted block">GDPR &amp; Cyber Ready</span>
                 </div>
               </div>
             </div>
 
             {/* Social Proof Line */}
-            <div className="flex flex-wrap items-center gap-y-2 gap-x-4 text-xs text-muted pt-1">
+            <div className="flex flex-col xs:flex-row flex-wrap items-start xs:items-center gap-y-2 gap-x-4 text-xs text-muted pt-1">
               <div className="flex items-center gap-1.5 text-main font-medium">
                 <div className="flex text-amber-400" aria-hidden="true">
                   {[...Array(5)].map((_, i) => (
@@ -133,7 +131,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenCons
                 </div>
                 <span>4.9/5 Rating</span>
               </div>
-              <span className="text-muted/40 hidden sm:inline" aria-hidden="true">·</span>
+              <span className="text-muted/40 hidden xs:inline" aria-hidden="true">·</span>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-teal-500 dark:text-teal-400 shrink-0" aria-hidden="true" />
                 <span>100% In-house UK Senior Leads</span>

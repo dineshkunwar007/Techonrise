@@ -32,9 +32,9 @@ export const AIAutomationSection: React.FC<AIAutomationSectionProps> = ({ onNavi
   ];
 
   return (
-    <section className="py-24 bg-[var(--bg-main)]">
+    <section className="py-14 sm:py-20 lg:py-24 bg-[var(--bg-main)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Practical AI Narrative */}
           <div className="lg:col-span-6 space-y-6">
             <div className="flex items-center gap-2 text-xs font-mono text-accent">
@@ -70,10 +70,11 @@ export const AIAutomationSection: React.FC<AIAutomationSectionProps> = ({ onNavi
               ))}
             </div>
 
-            <div className="pt-2 flex items-center gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <Button
                 variant="primary"
                 size="md"
+                className="w-full sm:w-auto"
                 onClick={() => onNavigate('/services/ai-automation')}
                 icon={<ArrowRight className="w-4 h-4" />}
               >
@@ -82,6 +83,7 @@ export const AIAutomationSection: React.FC<AIAutomationSectionProps> = ({ onNavi
               <Button
                 variant="outline"
                 size="md"
+                className="w-full sm:w-auto"
                 onClick={() => onNavigate('/contact')}
               >
                 Audit Your Workflows

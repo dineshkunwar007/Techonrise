@@ -76,7 +76,7 @@ export const CookieBanner: React.FC = () => {
     <div
       role="region"
       aria-label="Cookie consent banner"
-      className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md z-50 p-5 bg-[var(--surface-1)] border border-subtle rounded-xl shadow-2xl backdrop-blur-xl animate-in fade-in slide-in-from-bottom-4 duration-300"
+      className="fixed bottom-[74px] sm:bottom-6 left-3 right-3 sm:left-auto sm:right-6 sm:max-w-md z-50 p-4 sm:p-5 bg-[var(--surface-1)] border border-subtle rounded-2xl shadow-2xl backdrop-blur-xl animate-in fade-in slide-in-from-bottom-4 duration-300"
     >
       <div className="flex items-start gap-3">
         <ShieldCheck className="w-5 h-5 text-accent shrink-0 mt-0.5" />

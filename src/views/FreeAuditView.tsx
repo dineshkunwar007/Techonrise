@@ -154,7 +154,7 @@ export const FreeAuditView: React.FC<FreeAuditViewProps> = ({ onNavigate }) => {
         </div>
 
         {/* Core Conversion Layout: What's Included vs The Form */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start my-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start my-6 sm:my-10">
           
           {/* Left Column: What Is Included In Your Audit */}
           <div className="lg:col-span-7 space-y-6">
@@ -176,11 +176,11 @@ export const FreeAuditView: React.FC<FreeAuditViewProps> = ({ onNavigate }) => {
                 return (
                   <div
                     key={idx}
-                    className="p-5 sm:p-6 rounded-2xl bg-[var(--surface-1)] border border-subtle hover:border-accent/30 transition-all duration-200 group"
+                    className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[var(--surface-1)] border border-subtle hover:border-accent/30 transition-all duration-200 group"
                   >
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-[var(--surface-2)] border border-subtle flex items-center justify-center text-accent shrink-0 group-hover:scale-105 transition-transform">
-                        <IconComponent className="w-5 h-5" />
+                    <div className="flex items-start gap-3.5 sm:gap-4">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[var(--surface-2)] border border-subtle flex items-center justify-center text-accent shrink-0 group-hover:scale-105 transition-transform">
+                        <IconComponent className="w-4 h-4 sm:w-5 sm:h-5" />
                       </div>
                       <div className="space-y-2 flex-1">
                         <div className="flex items-center justify-between flex-wrap gap-2">
@@ -221,7 +221,7 @@ export const FreeAuditView: React.FC<FreeAuditViewProps> = ({ onNavigate }) => {
 
           {/* Right Column: Short Lead Capture Form OR Thank-You State */}
           <div className="lg:col-span-5">
-            <div className="bg-[var(--surface-2)] border border-subtle rounded-3xl p-6 sm:p-8 shadow-xl sticky top-28">
+            <div className="bg-[var(--surface-2)] border border-subtle rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-xl sticky top-28">
               {submissionStatus === 'success' ? (
                 /* Clear Thank-You State */
                 <div className="py-6 text-center space-y-5 animate-in fade-in duration-300">

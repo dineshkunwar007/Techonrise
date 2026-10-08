@@ -20,12 +20,12 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onNavigate, limit }) => 
   }));
 
   return (
-    <section className="py-24 bg-[var(--surface-1)] border-t border-subtle">
+    <section className="py-14 sm:py-20 lg:py-24 bg-[var(--surface-1)] border-t border-subtle">
       {/* Schema.org FAQPage structured data */}
       <JsonLd schema={generateFAQSchema(displayFaqs)} />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto space-y-3 mb-14">
+        <div className="text-center max-w-3xl mx-auto space-y-3 mb-8 sm:mb-14">
           <div className="inline-flex items-center gap-2 text-xs font-mono text-accent">
             <span>CLARITY & GOVERNANCE</span>
             <span aria-hidden="true">·</span>
@@ -40,19 +40,20 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onNavigate, limit }) => 
         </div>
 
         {/* Crawlable WAI-ARIA Accordion */}
-        <div className="bg-[var(--surface-2)] p-6 sm:p-10 rounded-2xl border border-subtle">
+        <div className="bg-[var(--surface-2)] p-4 sm:p-8 lg:p-10 rounded-xl sm:rounded-2xl border border-subtle">
           <Accordion items={accordionItems} defaultOpenIndex={0} />
         </div>
 
         {limit && limit < FAQS_DATA.length && (
-          <div className="mt-10 text-center space-y-3">
+          <div className="mt-8 sm:mt-10 text-center space-y-3">
             <p className="text-xs text-muted">
               Have a specific question not covered here?
             </p>
-            <div className="flex items-center justify-center gap-3">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
               <Button
                 variant="outline"
                 size="sm"
+                className="w-full sm:w-auto"
                 onClick={() => onNavigate('/faq')}
               >
                 View All {FAQS_DATA.length} FAQs
@@ -60,6 +61,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ onNavigate, limit }) => 
               <Button
                 variant="primary"
                 size="sm"
+                className="w-full sm:w-auto"
                 onClick={() => onNavigate('/contact')}
               >
                 Ask Our Engineering Team

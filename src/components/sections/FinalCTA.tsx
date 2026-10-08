@@ -9,12 +9,12 @@ interface FinalCTAProps {
 
 export const FinalCTA: React.FC<FinalCTAProps> = ({ onNavigate, onOpenConsultationModal }) => {
   return (
-    <section className="py-24 bg-[var(--bg-main)] relative overflow-hidden">
+    <section className="py-14 sm:py-20 lg:py-24 bg-[var(--bg-main)] relative overflow-hidden">
       {/* Subtle depth lighting */}
       <div className="absolute inset-0 bg-radial from-[#2DD4BF]/10 via-transparent to-transparent pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-[var(--surface-1)] border border-subtle rounded-3xl p-8 sm:p-14 lg:p-16 text-center space-y-8 shadow-2xl">
+        <div className="bg-[var(--surface-1)] border border-subtle rounded-2xl sm:rounded-3xl p-5 sm:p-12 lg:p-16 text-center space-y-6 sm:space-y-8 shadow-2xl">
           <div className="space-y-4 max-w-2xl mx-auto">
             <span className="text-xs font-mono uppercase tracking-wider text-accent font-semibold block">
               Start Your Digital Transformation
@@ -27,10 +27,11 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onNavigate, onOpenConsultati
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
             <Button
               size="lg"
               variant="primary"
+              className="w-full sm:w-auto"
               onClick={() => {
                 if (onOpenConsultationModal) {
                   onOpenConsultationModal();
@@ -45,6 +46,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onNavigate, onOpenConsultati
             <Button
               size="lg"
               variant="secondary"
+              className="w-full sm:w-auto"
               onClick={() => onNavigate('/free-audit')}
             >
               Claim Free Digital Audit
@@ -52,17 +54,17 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onNavigate, onOpenConsultati
           </div>
 
           {/* Confidence markers */}
-          <div className="pt-6 border-t border-subtle flex flex-wrap items-center justify-center gap-6 text-xs text-muted">
+          <div className="pt-6 border-t border-subtle flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs text-muted">
             <div className="flex items-center gap-1.5">
-              <Check className="w-4 h-4 text-accent" />
+              <Check className="w-4 h-4 text-accent shrink-0" />
               <span>Direct discussion with technical leads</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <Clock className="w-4 h-4 text-accent" />
+              <Clock className="w-4 h-4 text-accent shrink-0" />
               <span>Response within 1 business day</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-accent" />
+              <ShieldCheck className="w-4 h-4 text-accent shrink-0" />
               <span>100% intellectual property ownership</span>
             </div>
           </div>

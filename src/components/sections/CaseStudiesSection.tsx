@@ -9,9 +9,9 @@ interface CaseStudiesSectionProps {
 
 export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onNavigate }) => {
   return (
-    <section className="py-24 bg-[var(--bg-main)]">
+    <section className="py-14 sm:py-20 lg:py-24 bg-[var(--bg-main)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-16">
           <div className="max-w-3xl space-y-3">
             <div className="flex items-center gap-2 text-xs font-mono text-accent">
               <span>VALIDATED PROOF & CASE STUDIES</span>
@@ -28,6 +28,7 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onNaviga
 
           <Button
             variant="secondary"
+            className="w-full sm:w-auto"
             onClick={() => onNavigate('/case-studies')}
             icon={<ArrowRight className="w-4 h-4" />}
           >
@@ -36,13 +37,13 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onNaviga
         </div>
 
         {/* Featured Case Studies Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {CASE_STUDIES_DATA.slice(0, 4).map((cs) => (
             <div
               key={cs.id}
-              className="bg-[var(--surface-1)] border border-subtle rounded-2xl p-7 sm:p-8 hover:border-accent/50 transition-all duration-300 flex flex-col justify-between group shadow-sm"
+              className="bg-[var(--surface-1)] border border-subtle rounded-xl sm:rounded-2xl p-5 sm:p-8 hover:border-accent/50 transition-all duration-300 flex flex-col justify-between group shadow-sm"
             >
-              <div className="space-y-5">
+              <div className="space-y-4 sm:space-y-5">
                 <div className="flex items-center justify-between text-xs font-mono text-muted">
                   <div className="flex items-center gap-2">
                     <span className="text-accent">{cs.industry}</span>
@@ -74,13 +75,13 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onNaviga
                 </div>
 
                 {/* Metrics Highlight */}
-                <div className="grid grid-cols-3 gap-3 py-4 border-y border-subtle">
+                <div className="grid grid-cols-3 gap-2 sm:gap-3 py-3 sm:py-4 border-y border-subtle">
                   {cs.metrics.map((m, mIdx) => (
                     <div key={mIdx} className="space-y-0.5">
-                      <span className="text-xl sm:text-2xl font-display font-bold text-accent tabular-nums block">
+                      <span className="text-lg sm:text-2xl font-display font-bold text-accent tabular-nums block">
                         {m.value}
                       </span>
-                      <span className="text-[11px] text-muted leading-tight block">
+                      <span className="text-[10px] sm:text-[11px] text-muted leading-tight block">
                         {m.label}
                       </span>
                     </div>

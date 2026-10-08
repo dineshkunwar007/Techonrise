@@ -100,40 +100,40 @@ export const InteractiveEstimator: React.FC<InteractiveEstimatorProps> = ({
   };
 
   return (
-    <section className="py-24 bg-[var(--surface-1)] border-y border-subtle relative overflow-hidden">
+    <section className="py-14 sm:py-20 lg:py-24 bg-[var(--surface-1)] border-y border-subtle relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="max-w-3xl space-y-3 mb-14">
+        <div className="max-w-3xl space-y-3 mb-10 sm:mb-14">
           <div className="flex items-center gap-2 text-xs font-mono text-accent">
             <Calculator className="w-3.5 h-3.5" />
             <span>INTERACTIVE SCOPE ESTIMATOR</span>
             <span aria-hidden="true">·</span>
-            <span>TRANSPARENT ENGINEERING PLANNING</span>
+            <span className="hidden xs:inline">TRANSPARENT ENGINEERING PLANNING</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-main tracking-tight">
-            Estimate Your Project Scope & Delivery Timeline.
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-display font-bold text-main tracking-tight">
+            Estimate Your Project Scope &amp; Delivery Timeline.
           </h2>
-          <p className="text-base text-muted leading-relaxed">
+          <p className="text-sm sm:text-base text-muted leading-relaxed">
             Select your technical focus and pace below to explore estimated sprint duration, deliverables, recommended tech stack, and indicative investment.
           </p>
         </div>
 
         {/* Interactive Calculator Workspace */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
           
           {/* Left Column: Scope & Parameter Controls */}
-          <div className="lg:col-span-7 space-y-6 bg-[var(--surface-2)] p-6 sm:p-8 rounded-3xl border border-subtle">
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6 bg-[var(--surface-2)] p-4 sm:p-8 rounded-2xl sm:rounded-3xl border border-subtle">
             
             {/* Step 1: Service Archetype */}
             <div className="space-y-3">
               <label className="text-xs font-mono uppercase tracking-wider text-muted font-semibold block">
                 01. Select Primary Transformation Need
               </label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
                 {serviceOptions.map((opt) => {
                   const isSelected = opt.id === selectedService;
                   return (
@@ -141,7 +141,7 @@ export const InteractiveEstimator: React.FC<InteractiveEstimatorProps> = ({
                       key={opt.id}
                       type="button"
                       onClick={() => setSelectedService(opt.id)}
-                      className={`text-left p-4 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
+                      className={`text-left p-3.5 sm:p-4 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
                         isSelected
                           ? 'bg-[var(--surface-1)] border-accent shadow-sm ring-1 ring-accent/30'
                           : 'bg-[var(--surface-1)]/60 border-subtle hover:border-accent/40'
@@ -149,10 +149,10 @@ export const InteractiveEstimator: React.FC<InteractiveEstimatorProps> = ({
                     >
                       <div>
                         <div className="flex items-center justify-between">
-                          <h3 className={`text-sm font-semibold ${isSelected ? 'text-accent' : 'text-main'}`}>
+                          <h3 className={`text-xs sm:text-sm font-semibold ${isSelected ? 'text-accent' : 'text-main'}`}>
                             {opt.name}
                           </h3>
-                          {isSelected && <span className="w-2 h-2 rounded-full bg-accent" />}
+                          {isSelected && <span className="w-2 h-2 rounded-full bg-accent shrink-0 ml-1.5" />}
                         </div>
                         <p className="text-[11px] text-muted mt-1 leading-snug">
                           {opt.subtitle}
@@ -171,13 +171,13 @@ export const InteractiveEstimator: React.FC<InteractiveEstimatorProps> = ({
             {/* Step 2: Delivery Pace */}
             <div className="space-y-3 pt-2">
               <label className="text-xs font-mono uppercase tracking-wider text-muted font-semibold block">
-                02. Choose Sprint Cadence & Pace
+                02. Choose Sprint Cadence &amp; Pace
               </label>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 xs:grid-cols-2 gap-2.5 sm:gap-3">
                 <button
                   type="button"
                   onClick={() => setTimelineSpeed('standard')}
-                  className={`p-3.5 rounded-xl border text-left cursor-pointer transition-all ${
+                  className={`p-3 sm:p-3.5 rounded-xl border text-left cursor-pointer transition-all ${
                     timelineSpeed === 'standard'
                       ? 'bg-[var(--surface-1)] border-accent font-semibold shadow-xs'
                       : 'bg-[var(--surface-1)]/60 border-subtle text-muted hover:text-main'
@@ -190,14 +190,14 @@ export const InteractiveEstimator: React.FC<InteractiveEstimatorProps> = ({
                 <button
                   type="button"
                   onClick={() => setTimelineSpeed('accelerated')}
-                  className={`p-3.5 rounded-xl border text-left cursor-pointer transition-all ${
+                  className={`p-3 sm:p-3.5 rounded-xl border text-left cursor-pointer transition-all ${
                     timelineSpeed === 'accelerated'
                       ? 'bg-[var(--surface-1)] border-accent font-semibold shadow-xs'
                       : 'bg-[var(--surface-1)]/60 border-subtle text-muted hover:text-main'
                   }`}
                 >
                   <div className="text-xs text-main font-semibold flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-accent" />
+                    <Sparkles className="w-3.5 h-3.5 text-accent shrink-0" />
                     <span>Fast-Track Sprint</span>
                   </div>
                   <div className="text-[11px] text-muted mt-0.5">Dedicated priority engineering team</div>
@@ -208,9 +208,9 @@ export const InteractiveEstimator: React.FC<InteractiveEstimatorProps> = ({
             {/* Step 3: Architecture Inclusions & Addons */}
             <div className="space-y-3 pt-2">
               <label className="text-xs font-mono uppercase tracking-wider text-muted font-semibold block">
-                03. Quality & Compliance Inclusions
+                03. Quality &amp; Compliance Inclusions
               </label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
                 {addons.map((addon) => {
                   const isChecked = selectedAddons.includes(addon.id);
                   return (
@@ -218,7 +218,7 @@ export const InteractiveEstimator: React.FC<InteractiveEstimatorProps> = ({
                       key={addon.id}
                       type="button"
                       onClick={() => toggleAddon(addon.id)}
-                      className={`p-3 rounded-xl border text-left cursor-pointer transition-all flex items-center justify-between text-xs ${
+                      className={`p-2.5 sm:p-3 rounded-xl border text-left cursor-pointer transition-all flex items-center justify-between text-xs ${
                         isChecked
                           ? 'bg-[var(--surface-1)] border-accent/50 text-main font-medium shadow-2xs'
                           : 'bg-[var(--surface-1)]/40 border-subtle text-muted hover:text-main'
@@ -230,9 +230,9 @@ export const InteractiveEstimator: React.FC<InteractiveEstimatorProps> = ({
                         }`}>
                           {isChecked ? '✓' : ''}
                         </span>
-                        <span>{addon.label}</span>
+                        <span className="text-xs truncate">{addon.label}</span>
                       </div>
-                      <span className="font-mono text-[10px] text-accent ml-1">
+                      <span className="font-mono text-[10px] text-accent ml-1 shrink-0">
                         {addon.cost}
                       </span>
                     </button>
@@ -244,7 +244,7 @@ export const InteractiveEstimator: React.FC<InteractiveEstimatorProps> = ({
           </div>
 
           {/* Right Column: Live Calculated Blueprint Card */}
-          <div className="lg:col-span-5 bg-[var(--surface-2)] border border-subtle rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm lg:sticky lg:top-28">
+          <div className="lg:col-span-5 bg-[var(--surface-2)] border border-subtle rounded-2xl sm:rounded-3xl p-4 sm:p-8 space-y-5 sm:space-y-6 shadow-sm lg:sticky lg:top-28">
             <div className="flex items-center justify-between pb-4 border-b border-subtle">
               <span className="text-xs font-mono uppercase tracking-wider text-accent font-semibold flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5" />

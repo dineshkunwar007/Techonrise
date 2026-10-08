@@ -4,12 +4,12 @@ import { Star, Quote, CheckCircle2 } from 'lucide-react';
 
 export const TestimonialsSection: React.FC = () => {
   return (
-    <section className="py-24 bg-[var(--bg-main)] relative overflow-hidden">
+    <section className="py-14 sm:py-20 lg:py-24 bg-[var(--bg-main)] relative overflow-hidden">
       {/* Background radial highlight */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl space-y-3 mb-16">
+        <div className="max-w-3xl space-y-3 mb-10 sm:mb-16">
           <div className="flex items-center gap-2 text-xs font-mono text-accent">
             <span>EXECUTIVE FEEDBACK</span>
             <span aria-hidden="true">·</span>
@@ -24,7 +24,7 @@ export const TestimonialsSection: React.FC = () => {
         </div>
 
         {/* Testimonials Masonry / Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           {TESTIMONIALS_DATA.map((t) => {
             const initials = t.author
               .split(' ')
@@ -35,7 +35,7 @@ export const TestimonialsSection: React.FC = () => {
             return (
               <div
                 key={t.id}
-                className="bg-[var(--surface-1)] border border-subtle rounded-2xl p-7 sm:p-8 flex flex-col justify-between hover:border-accent/40 transition-all duration-300 shadow-xs hover:shadow-md relative group"
+                className="bg-[var(--surface-1)] border border-subtle rounded-xl sm:rounded-2xl p-5 sm:p-8 flex flex-col justify-between hover:border-accent/40 transition-all duration-300 shadow-xs hover:shadow-md relative group"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
@@ -55,7 +55,7 @@ export const TestimonialsSection: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="pt-4 sm:pt-6 mt-4 sm:mt-6 border-t border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-accent/15 border border-accent/30 text-accent font-display font-bold text-sm flex items-center justify-center shrink-0">
                       {initials}
