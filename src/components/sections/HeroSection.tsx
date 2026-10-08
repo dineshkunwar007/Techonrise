@@ -25,7 +25,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenCons
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Column: Bold Typographic Hierarchy & Depth Layers */}
-          <div className="lg:col-span-8 space-y-6 sm:space-y-8 max-w-3xl">
+          <div className="lg:col-span-7 space-y-6 sm:space-y-8 max-w-3xl">
             
             {/* Eyebrow Line */}
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[var(--surface-1)] border border-subtle shadow-xs backdrop-blur-md">
@@ -92,6 +92,51 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenCons
               </div>
             </div>
 
+            {/* Mobile-Only Services Banner Placement (Smooth Flow Under Action CTAs) */}
+            <div className="block lg:hidden pt-3 sm:pt-4">
+              <div className="relative group w-full">
+                <div
+                  className="absolute -inset-1 sm:-inset-1.5 bg-gradient-to-r from-teal-500/20 via-cyan-500/25 to-teal-400/20 rounded-2xl blur-lg opacity-75 pointer-events-none -z-10"
+                  aria-hidden="true"
+                />
+                <div className="relative rounded-2xl overflow-hidden border border-teal-500/30 dark:border-teal-400/25 bg-[var(--surface-1)]/90 backdrop-blur-xl shadow-xl">
+                  <div className="relative aspect-video w-full overflow-hidden bg-[#090D11]">
+                    <img
+                      src="/techonrise-services-banner.jpg"
+                      alt="Techonrise 5 Core Digital Practices: SEO Growth, Bespoke Websites, Custom Software, AI Automation, UK Cloud"
+                      width={1280}
+                      height={720}
+                      loading="eager"
+                      fetchPriority="high"
+                      className="w-full h-full object-cover object-center"
+                    />
+                    <div className="absolute top-2.5 right-2.5 flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#090D11]/85 backdrop-blur-md border border-teal-500/30 text-[10px] font-mono text-teal-300 font-semibold shadow-md">
+                      <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse" aria-hidden="true" />
+                      <span>UK HUB</span>
+                    </div>
+                  </div>
+                  <div className="p-2.5 sm:p-3 bg-[var(--surface-2)]/90 border-t border-subtle flex items-center justify-between text-xs">
+                    <span className="text-[11px] font-mono text-teal-600 dark:text-teal-400 font-bold uppercase tracking-wider">
+                      5 Core Practices
+                    </span>
+                    <a
+                      href="#services-showcase"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const el = document.getElementById('services-showcase');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                        else onNavigate('/services');
+                      }}
+                      className="text-[11px] font-semibold text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1 cursor-pointer"
+                    >
+                      <span>Explore Practices</span>
+                      <ArrowRight className="w-3 h-3" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Depth Layer Cards: Symmetric 2x2 on mobile, 4 across on desktop */}
             <div className="pt-2 sm:pt-4">
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 max-w-2xl">
@@ -145,8 +190,64 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenCons
 
           </div>
 
-          {/* Right Column: Space reserved for 3D visual on desktop */}
-          <div className="hidden lg:block lg:col-span-4" aria-hidden="true" />
+          {/* Right Column: Desktop Featured Services Banner Showcase */}
+          <div className="hidden lg:block lg:col-span-5 w-full">
+            <div className="relative group w-full">
+              {/* Glowing ambient bloom */}
+              <div
+                className="absolute -inset-2 bg-gradient-to-r from-teal-500/20 via-cyan-500/25 to-teal-400/20 rounded-3xl blur-2xl opacity-75 group-hover:opacity-100 transition duration-500 pointer-events-none -z-10"
+                aria-hidden="true"
+              />
+
+              {/* Main Card */}
+              <div className="relative rounded-3xl overflow-hidden border border-teal-500/30 dark:border-teal-400/25 bg-[var(--surface-1)]/90 backdrop-blur-xl shadow-2xl shadow-teal-950/20 transition-all duration-300 group-hover:border-teal-400/50 group-hover:shadow-teal-900/30">
+                <div className="relative aspect-video w-full overflow-hidden bg-[#090D11]">
+                  <img
+                    src="/techonrise-services-banner.jpg"
+                    alt="Techonrise 5 Core Digital Practices: SEO Growth, Bespoke Websites, Custom Software, AI Automation, UK Cloud"
+                    width={1280}
+                    height={720}
+                    loading="eager"
+                    fetchPriority="high"
+                    className="w-full h-full object-cover object-center transform transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+                  />
+
+                  {/* Micro-badge */}
+                  <div className="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#090D11]/85 backdrop-blur-md border border-teal-500/30 text-[11px] font-mono text-teal-300 font-semibold shadow-md">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse" aria-hidden="true" />
+                    <span>UK ENGINEERING</span>
+                  </div>
+                </div>
+
+                {/* Bottom caption bar */}
+                <div className="p-3.5 bg-[var(--surface-2)]/90 border-t border-subtle flex items-center justify-between text-xs">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[11px] font-mono text-teal-600 dark:text-teal-400 font-bold uppercase tracking-wider">
+                      5 Core Practices
+                    </span>
+                    <span className="text-muted/40" aria-hidden="true">·</span>
+                    <span className="text-[11px] text-muted">
+                      Unified UK Delivery Squad
+                    </span>
+                  </div>
+
+                  <a
+                    href="#services-showcase"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const el = document.getElementById('services-showcase');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      else onNavigate('/services');
+                    }}
+                    className="text-[11px] font-semibold text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1 cursor-pointer transition-colors"
+                  >
+                    <span>Explore Practices</span>
+                    <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>

@@ -36,19 +36,7 @@ export const HeroPosterFallback: React.FC = () => {
         <circle cx="65%" cy="45%" r="220" stroke="var(--accent)" strokeWidth="0.5" strokeDasharray="3 4" fill="none" />
         <circle cx="65%" cy="45%" r="340" stroke="var(--border-color)" strokeWidth="0.5" fill="none" />
         <circle cx="65%" cy="45%" r="4" fill="var(--accent)" />
-        
-        {/* Isometric schematic cubes */}
-        <polygon points="650,280 730,230 810,280 730,330" stroke="var(--accent)" strokeWidth="0.75" fill="rgba(45,212,191,0.03)" />
-        <polygon points="650,280 650,370 730,420 730,330" stroke="var(--accent)" strokeWidth="0.75" fill="rgba(45,212,191,0.02)" />
-        <polygon points="730,330 730,420 810,370 810,280" stroke="var(--accent)" strokeWidth="0.75" fill="rgba(45,212,191,0.05)" />
       </svg>
-
-      {/* Floating geographic coordinate stamp */}
-      <div className="absolute top-36 right-8 hidden xl:block text-[11px] font-mono text-muted/60 tracking-wider text-right space-y-0.5">
-        <p>UK_GRID: 53.4808° N, 2.2426° W</p>
-        <p>ENGINEERING_HUB: MANCHESTER_M1</p>
-        <p>ORCHESTRATION_LAYER: INITIALISED</p>
-      </div>
     </div>
   );
 };
