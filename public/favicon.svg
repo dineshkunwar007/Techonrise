@@ -1,49 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#111922" />
-      <stop offset="100%" stop-color="#090D12" />
-    </linearGradient>
-    <linearGradient id="rim" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.7" />
-      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.25" />
-      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.6" />
-    </linearGradient>
-    <linearGradient id="tealMain" x1="32" y1="12" x2="32" y2="53" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#5EEAD4" />
-      <stop offset="55%" stop-color="#2DD4BF" />
-      <stop offset="100%" stop-color="#0D9488" />
-    </linearGradient>
-    <linearGradient id="tealLeft" x1="12" y1="19" x2="32" y2="41" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2DD4BF" />
-      <stop offset="100%" stop-color="#0F766E" />
-    </linearGradient>
-    <linearGradient id="gold" x1="26" y1="8" x2="38" y2="22" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FDE68A" />
-      <stop offset="50%" stop-color="#F59E0B" />
-      <stop offset="100%" stop-color="#D97706" />
-    </linearGradient>
-  </defs>
-
-  <!-- Squircle Shield Base -->
-  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#bg)" stroke="url(#rim)" stroke-width="2" />
-
-  <!-- Subtle Horizon Arc -->
-  <path d="M10 46C22 38 42 38 54 46" stroke="#2DD4BF" stroke-opacity="0.16" stroke-width="1.6" stroke-linecap="round" />
-
-  <!-- Left Wing (Modernise) -->
-  <path d="M12 28L29.6 18.4V26.9L16.8 33.9C14.1 35.4 12 33.4 12 30.6V28Z" fill="url(#tealLeft)" />
-
-  <!-- Right Wing (Grow) -->
-  <path d="M52 28L34.4 18.4V26.9L47.2 33.9C49.9 35.4 52 33.4 52 30.6V28Z" fill="url(#tealMain)" fill-opacity="0.9" />
-
-  <!-- Central Rising Pillar (The 'T' Stem & Ascending Arrow) -->
-  <path d="M32 21.6L38.7 29.1H35.4V49.6C35.4 51.4 33.9 52.8 32 52.8C30.1 52.8 28.6 51.4 28.6 49.6V29.1H25.3L32 21.6Z" fill="url(#tealMain)" />
-
-  <!-- Secondary Lift Chevrons -->
-  <path d="M20 40.8L28.6 35.5V40.3L20 45.4V40.8ZM44 40.8L35.4 35.5V40.3L44 45.4V40.8Z" fill="#2DD4BF" fill-opacity="0.45" />
-
-  <!-- Golden Apex Beacon ('On' & 'Rise') -->
-  <path d="M32 8.3L37.1 13.8L32 19.2L26.9 13.8L32 8.3Z" fill="url(#gold)" />
-  <circle cx="32" cy="13.8" r="1.8" fill="#FEF3C7" />
+  <rect width="64" height="64" rx="16" fill="#0C0F12"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="#232A31" stroke-width="2"/>
+  <path d="M16 46L32 18L48 46H38L32 35L26 46H16Z" fill="#2DD4BF"/>
+  <circle cx="32" cy="18" r="3" fill="#FFFFFF"/>
 </svg>
