@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
-import { PACKAGES_DATA, type PackageItem } from '../data/packages';
+import { PACKAGES_DATA } from '../data/packages';
 import { Button } from '../components/ui/Button';
-import { Check, ArrowRight, ShieldCheck, X, Sparkles } from 'lucide-react';
+import { Check, ArrowRight, ShieldCheck } from 'lucide-react';
 import { JsonLd } from '../components/seo/JsonLd';
 import { generateBreadcrumbSchema, generateOfferCatalogSchema } from '../lib/schema';
+import { InteractiveEstimator } from '../components/sections/InteractiveEstimator';
 
 export const PackagesView: React.FC<{
   onNavigate: (path: string) => void;
@@ -236,6 +237,14 @@ export const PackagesView: React.FC<{
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Interactive Project Scope & Timeline Estimator */}
+        <div id="estimator" className="my-16 -mx-4 sm:-mx-6 lg:-mx-8">
+          <InteractiveEstimator
+            onNavigate={onNavigate}
+            onOpenConsultationModal={onOpenConsultationModal}
+          />
         </div>
 
         {/* Feature Comparison Table (Scrolls horizontally inside container on mobile) */}

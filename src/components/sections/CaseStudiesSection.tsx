@@ -36,12 +36,21 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onNaviga
           </Button>
         </div>
 
-        {/* Featured Case Studies Grid */}
+        {/* Featured Case Studies Grid (Top 2 Flagship Studies on Home, Full List on /case-studies) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-          {CASE_STUDIES_DATA.slice(0, 4).map((cs) => (
+          {CASE_STUDIES_DATA.slice(0, 2).map((cs) => (
             <div
               key={cs.id}
-              className="bg-[var(--surface-1)] border border-subtle rounded-xl sm:rounded-2xl p-5 sm:p-8 hover:border-accent/50 transition-all duration-300 flex flex-col justify-between group shadow-sm"
+              onClick={() => onNavigate(`/case-studies/${cs.slug}`)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  onNavigate(`/case-studies/${cs.slug}`);
+                }
+              }}
+              className="bg-[var(--surface-1)] border border-subtle rounded-xl sm:rounded-2xl p-5 sm:p-8 hover:border-accent/50 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-lg cursor-pointer"
             >
               <div className="space-y-4 sm:space-y-5">
                 <div className="flex items-center justify-between text-xs font-mono text-muted">
@@ -51,23 +60,14 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onNaviga
                     <span>{cs.location}</span>
                   </div>
                   <span className="text-[10px] font-mono text-accent bg-accent/10 px-2 py-0.5 rounded uppercase font-semibold">
-                    Verified Case Study
+                    Verified Result
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-display font-bold text-main group-hover:text-accent transition-colors">
-                    <a
-                      href={`/case-studies/${cs.slug}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        onNavigate(`/case-studies/${cs.slug}`);
-                      }}
-                      className="flex items-center justify-between"
-                    >
-                      <span>{cs.title}</span>
-                      <ArrowUpRight className="w-5 h-5 shrink-0 ml-2 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-accent" />
-                    </a>
+                  <h3 className="text-xl sm:text-2xl font-display font-bold text-main group-hover:text-accent transition-colors flex items-center justify-between">
+                    <span>{cs.title}</span>
+                    <ArrowUpRight className="w-5 h-5 shrink-0 ml-2 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-accent" />
                   </h3>
                   <p className="text-xs sm:text-sm text-muted mt-2.5 leading-relaxed">
                     {cs.summary}
@@ -89,17 +89,12 @@ export const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ onNaviga
                 </div>
               </div>
 
-              {/* Client Quote Snippet */}
-              {cs.testimonialSnippet && (
-                <div className="pt-5 mt-5">
-                  <blockquote className="text-xs text-muted italic border-l-2 border-accent/40 pl-3 leading-relaxed">
-                    "{cs.testimonialSnippet.quote}"
-                  </blockquote>
-                  <div className="mt-2 text-[11px] text-main font-medium pl-3">
-                    {cs.testimonialSnippet.author} · <span className="text-muted">{cs.testimonialSnippet.role}</span>
-                  </div>
-                </div>
-              )}
+              <div className="pt-4 mt-2 flex items-center justify-between text-xs font-semibold text-accent">
+                <span>Read Full Case Study</span>
+                <span className="inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  View Breakdown <ArrowRight className="w-3.5 h-3.5" />
+                </span>
+              </div>
             </div>
           ))}
         </div>

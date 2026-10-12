@@ -2,10 +2,11 @@ import React from 'react';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import { SERVICES_DATA } from '../data/services';
 import { Button } from '../components/ui/Button';
-import { ArrowRight, CheckCircle2, Zap, Layers, Sparkles, ShieldCheck } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Zap, Layers, ShieldCheck } from 'lucide-react';
 import { JsonLd } from '../components/seo/JsonLd';
 import { generateOfferCatalogSchema, generateBreadcrumbSchema } from '../lib/schema';
 import { FAQSection } from '../components/sections/FAQSection';
+import { ProcessTimeline } from '../components/sections/ProcessTimeline';
 
 export const ServicesView: React.FC<{
   onNavigate: (path: string) => void;
@@ -16,15 +17,6 @@ export const ServicesView: React.FC<{
     description: c.overview,
     url: `/services/${c.slug}`,
   }));
-
-  const processStages = [
-    { num: '01', title: 'Discover', desc: 'Full-stack technical audit & commercial bottleneck identification.' },
-    { num: '02', title: 'Strategise', desc: 'Information architecture, schema blueprints & milestone roadmap.' },
-    { num: '03', title: 'Design', desc: 'Dark-luxury tokens, WCAG 2.2 AA accessibility & conversion ergonomics.' },
-    { num: '04', title: 'Build', desc: 'Deterministic Next.js, sub-second TTFB & clean TypeScript codebases.' },
-    { num: '05', title: 'Launch', desc: 'Zero-downtime DNS cutover, 301 preservation & sitemap ingestion.' },
-    { num: '06', title: 'Grow', desc: 'Continuous bi-weekly sprints, ranking expansion & AI workflow tuning.' },
-  ];
 
   return (
     <div className="pt-28 pb-20">
@@ -174,34 +166,9 @@ export const ServicesView: React.FC<{
           ))}
         </div>
 
-        {/* 6-Stage Delivery Process Summary */}
-        <div className="my-20 bg-[var(--surface-2)] border border-subtle rounded-3xl p-8 sm:p-12 space-y-8 shadow-sm">
-          <div className="max-w-2xl space-y-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-accent font-semibold">
-              DELIVERY METHODOLOGY
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-display font-bold text-main">
-              The 6-Stage Engineering Process
-            </h2>
-            <p className="text-xs sm:text-sm text-muted">
-              Every practice follows our proven, deterministic agile deployment framework.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {processStages.map((st) => (
-              <div
-                key={st.num}
-                className="p-4 rounded-xl bg-[var(--surface-1)] border border-subtle space-y-2 flex flex-col justify-between"
-              >
-                <div>
-                  <span className="font-mono text-xs font-bold text-accent">{st.num}.</span>
-                  <h3 className="text-sm font-semibold text-main mt-1">{st.title}</h3>
-                  <p className="text-[11px] text-muted mt-1 leading-snug">{st.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* Full Interactive 6-Stage Delivery Process Timeline */}
+        <div className="my-16 -mx-4 sm:-mx-6 lg:-mx-8">
+          <ProcessTimeline />
         </div>
 
         {/* Sector Solution Callout */}

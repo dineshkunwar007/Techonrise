@@ -49,7 +49,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenCons
 
               {/* Sub-headline / Positioning Statement */}
               <p className="text-sm sm:text-lg lg:text-xl text-muted leading-relaxed font-normal max-w-2xl">
-                Techonrise unifies technical SEO, bespoke web applications, cloud architecture, and practical AI automations into one accountable, UK-based engineering team.
+                Your all-in-one UK technology partner. We help ambitious businesses win more customers on Google, build fast modern websites and apps, and automate repetitive daily admin—all handled by one friendly, accountable Manchester team.
               </p>
             </div>
 
@@ -84,10 +84,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenCons
                 <Button
                   size="md"
                   variant="outline"
-                  onClick={() => onNavigate('/case-studies')}
+                  onClick={() => onNavigate('/services')}
                   className="w-full sm:w-auto min-h-[46px] sm:min-h-[50px] text-xs sm:text-sm px-3 sm:px-5"
                 >
-                  Case Studies
+                  Our Services
                 </Button>
               </div>
             </div>
@@ -117,7 +117,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenCons
                   </div>
                   <div className="p-2.5 sm:p-3 bg-[var(--surface-2)]/90 border-t border-subtle flex items-center justify-between text-xs">
                     <span className="text-[11px] font-mono text-teal-600 dark:text-teal-400 font-bold uppercase tracking-wider">
-                      5 Core Practices
+                      5 Core Services
                     </span>
                     <a
                       href="#services-showcase"
@@ -129,7 +129,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenCons
                       }}
                       className="text-[11px] font-semibold text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1 cursor-pointer"
                     >
-                      <span>Explore Practices</span>
+                      <span>Jump to Service Tiles</span>
                       <ArrowRight className="w-3 h-3" />
                     </a>
                   </div>
@@ -137,32 +137,60 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenCons
               </div>
             </div>
 
-            {/* Depth Layer Cards: Symmetric 2x2 on mobile, 4 across on desktop */}
+            {/* Interactive Quick-Navigation Pillar Tiles: Symmetric 2x2 on mobile, 4 across on desktop */}
             <div className="pt-2 sm:pt-4">
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 max-w-2xl">
-                <div className="p-3 sm:p-3.5 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle shadow-2xs space-y-1">
-                  <span className="text-[11px] font-mono text-teal-600 dark:text-teal-400 font-semibold block">01 · SEARCH</span>
-                  <span className="text-xs sm:text-sm font-semibold text-main block">Technical SEO</span>
-                  <span className="text-[11px] text-muted block">Core Web Vitals &amp; AEO</span>
-                </div>
+                <button
+                  type="button"
+                  onClick={() => onNavigate('/services/seo-growth')}
+                  className="text-left p-3 sm:p-3.5 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle hover:border-accent/50 shadow-2xs space-y-1 transition-all group cursor-pointer"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] sm:text-[11px] font-mono text-teal-600 dark:text-teal-400 font-semibold">01 · GET FOUND</span>
+                    <ArrowRight className="w-3 h-3 text-muted group-hover:text-accent group-hover:translate-x-0.5 transition-all" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-semibold text-main group-hover:text-accent transition-colors block">SEO &amp; Growth</span>
+                  <span className="text-[11px] text-muted block">Rank higher on Google</span>
+                </button>
 
-                <div className="p-3 sm:p-3.5 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle shadow-2xs space-y-1">
-                  <span className="text-[11px] font-mono text-teal-600 dark:text-teal-400 font-semibold block">02 · SOFTWARE</span>
-                  <span className="text-xs sm:text-sm font-semibold text-main block">Next.js &amp; Apps</span>
-                  <span className="text-[11px] text-muted block">100% Code Ownership</span>
-                </div>
+                <button
+                  type="button"
+                  onClick={() => onNavigate('/services/websites-ecommerce')}
+                  className="text-left p-3 sm:p-3.5 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle hover:border-accent/50 shadow-2xs space-y-1 transition-all group cursor-pointer"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] sm:text-[11px] font-mono text-teal-600 dark:text-teal-400 font-semibold">02 · MODERNISE</span>
+                    <ArrowRight className="w-3 h-3 text-muted group-hover:text-accent group-hover:translate-x-0.5 transition-all" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-semibold text-main group-hover:text-accent transition-colors block">Web &amp; Apps</span>
+                  <span className="text-[11px] text-muted block">Fast websites &amp; portals</span>
+                </button>
 
-                <div className="p-3 sm:p-3.5 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle shadow-2xs space-y-1">
-                  <span className="text-[11px] font-mono text-amber-500 font-semibold block">03 · AI &amp; DATA</span>
-                  <span className="text-xs sm:text-sm font-semibold text-main block">AI Automation</span>
-                  <span className="text-[11px] text-muted block">CRM &amp; Vector Pipelines</span>
-                </div>
+                <button
+                  type="button"
+                  onClick={() => onNavigate('/services/ai-automation')}
+                  className="text-left p-3 sm:p-3.5 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle hover:border-accent/50 shadow-2xs space-y-1 transition-all group cursor-pointer"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] sm:text-[11px] font-mono text-amber-500 font-semibold">03 · SAVE TIME</span>
+                    <ArrowRight className="w-3 h-3 text-muted group-hover:text-amber-500 group-hover:translate-x-0.5 transition-all" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-semibold text-main group-hover:text-accent transition-colors block">AI Automation</span>
+                  <span className="text-[11px] text-muted block">Cut weekly paperwork</span>
+                </button>
 
-                <div className="p-3 sm:p-3.5 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle shadow-2xs space-y-1">
-                  <span className="text-[11px] font-mono text-teal-600 dark:text-teal-400 font-semibold block">04 · SECURITY</span>
-                  <span className="text-xs sm:text-sm font-semibold text-main block">UK Sovereign</span>
-                  <span className="text-[11px] text-muted block">GDPR &amp; Cyber Ready</span>
-                </div>
+                <button
+                  type="button"
+                  onClick={() => onNavigate('/services/hosting-infrastructure')}
+                  className="text-left p-3 sm:p-3.5 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle hover:border-accent/50 shadow-2xs space-y-1 transition-all group cursor-pointer"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] sm:text-[11px] font-mono text-teal-600 dark:text-teal-400 font-semibold">04 · RELIABLE</span>
+                    <ArrowRight className="w-3 h-3 text-muted group-hover:text-accent group-hover:translate-x-0.5 transition-all" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-semibold text-main group-hover:text-accent transition-colors block">UK Hosting</span>
+                  <span className="text-[11px] text-muted block">Secure &amp; GDPR ready</span>
+                </button>
               </div>
             </div>
 
