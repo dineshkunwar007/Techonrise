@@ -10,7 +10,7 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenConsultationModal }) => {
   return (
-    <section className="relative min-h-[92svh] flex flex-col justify-center pt-28 sm:pt-36 pb-16 sm:pb-24 overflow-hidden bg-[var(--bg-main)]">
+    <section className="relative min-h-[88svh] lg:min-h-[92svh] flex flex-col justify-center pt-28 sm:pt-32 lg:pt-30 pb-12 sm:pb-16 lg:pb-14 overflow-hidden bg-[var(--bg-main)]">
       {/* 
         3D Architectural Scene:
         Positioned to bleed gracefully off the right edge while preserving
@@ -137,9 +137,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenCons
               </div>
             </div>
 
-            {/* Interactive Quick-Navigation Pillar Tiles: Symmetric 2x2 on mobile, 4 across on desktop */}
-            <div className="pt-2 sm:pt-4">
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 max-w-2xl">
+            {/* Mobile-Only Interactive Quick-Navigation Pillar Tiles: Symmetric 2x2 on mobile, hidden on desktop */}
+            <div className="pt-2 sm:pt-4 block lg:hidden">
+              <div className="grid grid-cols-2 gap-2.5 sm:gap-3 max-w-2xl">
                 <button
                   type="button"
                   onClick={() => onNavigate('/services/seo-growth')}
@@ -194,8 +194,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenCons
               </div>
             </div>
 
-            {/* Social Proof Line */}
-            <div className="flex flex-col xs:flex-row flex-wrap items-start xs:items-center gap-y-2 gap-x-4 text-xs text-muted pt-1">
+            {/* Mobile-Only Social Proof Line */}
+            <div className="flex flex-col xs:flex-row flex-wrap items-start xs:items-center gap-y-2 gap-x-4 text-xs text-muted pt-1 block lg:hidden">
               <div className="flex items-center gap-1.5 text-main font-medium">
                 <div className="flex text-amber-400" aria-hidden="true">
                   {[...Array(5)].map((_, i) => (
@@ -218,8 +218,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenCons
 
           </div>
 
-          {/* Right Column: Desktop Featured Services Banner Showcase */}
-          <div className="hidden lg:block lg:col-span-5 w-full">
+          {/* Right Column: Desktop Featured Services Banner Showcase (Shifted slightly upward for better spatial balance) */}
+          <div className="hidden lg:block lg:col-span-5 w-full lg:-mt-4 lg:-translate-y-5">
             <div className="relative group w-full">
               {/* Glowing ambient bloom */}
               <div
@@ -278,6 +278,86 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenCons
           </div>
 
         </div>
+
+        {/* Desktop-Only Center-Aligned Pillar Navigation Cards & Social Proof */}
+        <div className="hidden lg:block pt-8 lg:pt-10 w-full">
+          <div className="grid grid-cols-4 gap-3.5 sm:gap-4 max-w-5xl mx-auto">
+            <button
+              type="button"
+              onClick={() => onNavigate('/services/seo-growth')}
+              className="text-left p-3.5 sm:p-4 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle hover:border-accent/50 shadow-2xs space-y-1.5 transition-all group cursor-pointer hover:-translate-y-0.5 hover:shadow-md"
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-mono text-teal-600 dark:text-teal-400 font-semibold">01 · GET FOUND</span>
+                <ArrowRight className="w-3.5 h-3.5 text-muted group-hover:text-accent group-hover:translate-x-0.5 transition-all" />
+              </div>
+              <span className="text-sm font-semibold text-main group-hover:text-accent transition-colors block">SEO &amp; Growth</span>
+              <span className="text-xs text-muted block">Rank higher on Google</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => onNavigate('/services/websites-ecommerce')}
+              className="text-left p-3.5 sm:p-4 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle hover:border-accent/50 shadow-2xs space-y-1.5 transition-all group cursor-pointer hover:-translate-y-0.5 hover:shadow-md"
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-mono text-teal-600 dark:text-teal-400 font-semibold">02 · MODERNISE</span>
+                <ArrowRight className="w-3.5 h-3.5 text-muted group-hover:text-accent group-hover:translate-x-0.5 transition-all" />
+              </div>
+              <span className="text-sm font-semibold text-main group-hover:text-accent transition-colors block">Web &amp; Apps</span>
+              <span className="text-xs text-muted block">Fast websites &amp; portals</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => onNavigate('/services/ai-automation')}
+              className="text-left p-3.5 sm:p-4 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle hover:border-accent/50 shadow-2xs space-y-1.5 transition-all group cursor-pointer hover:-translate-y-0.5 hover:shadow-md"
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-mono text-amber-500 font-semibold">03 · SAVE TIME</span>
+                <ArrowRight className="w-3.5 h-3.5 text-muted group-hover:text-amber-500 group-hover:translate-x-0.5 transition-all" />
+              </div>
+              <span className="text-sm font-semibold text-main group-hover:text-accent transition-colors block">AI Automation</span>
+              <span className="text-xs text-muted block">Cut weekly paperwork</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => onNavigate('/services/hosting-infrastructure')}
+              className="text-left p-3.5 sm:p-4 rounded-xl bg-[var(--surface-1)]/90 backdrop-blur-md border border-subtle hover:border-accent/50 shadow-2xs space-y-1.5 transition-all group cursor-pointer hover:-translate-y-0.5 hover:shadow-md"
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-mono text-teal-600 dark:text-teal-400 font-semibold">04 · RELIABLE</span>
+                <ArrowRight className="w-3.5 h-3.5 text-muted group-hover:text-accent group-hover:translate-x-0.5 transition-all" />
+              </div>
+              <span className="text-sm font-semibold text-main group-hover:text-accent transition-colors block">UK Hosting</span>
+              <span className="text-xs text-muted block">Secure &amp; GDPR ready</span>
+            </button>
+          </div>
+
+          {/* Desktop Center-Aligned Social Proof Line */}
+          <div className="flex items-center justify-center gap-x-6 text-xs text-muted pt-4">
+            <div className="flex items-center gap-1.5 text-main font-medium">
+              <div className="flex text-amber-400" aria-hidden="true">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                ))}
+              </div>
+              <span>4.9/5 Rating</span>
+            </div>
+            <span className="text-muted/40" aria-hidden="true">·</span>
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4 text-teal-500 dark:text-teal-400 shrink-0" aria-hidden="true" />
+              <span>100% In-house UK Senior Leads</span>
+            </div>
+            <span className="text-muted/40" aria-hidden="true">·</span>
+            <div className="flex items-center gap-1.5">
+              <ShieldCheck className="w-4 h-4 text-teal-500 dark:text-teal-400 shrink-0" aria-hidden="true" />
+              <span>1 Business Day Response Guarantee</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
